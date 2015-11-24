@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/p-news-mediadetail.css' %}">
+<script type="text/javascript" src="{% static 'js/back.v1.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/p-news-media.css' %}">
+<link href="{% static 'css/index_v2.all.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script src="{% static 'js/common_v2.all.min.js' %}"></script>
+    <div class="main  pt23 pb30 clearfix">
+        <div class="ui-new-sidebar">
+            <ul class="new-tab">
+                <li><a href="/index/media">媒体报道</a></li>
+                <li class="select"><a href="/index/notice">平台公告</a></li>
+            </ul>
+        </div>
+        <div class="ui-new-mainbody">
+            <div class="p_news_mediadetail">
+                <div class="ui-box">
+                    <div class="h-title">
+                        <h2><p style="margin-top: 12px;"><i></i>平台公告</p></h2>
+                    </div>
+                    <div class="media-article">
+                        <div class="news-tit">
+                            <h1>{{ acticle_details.title }}网信理财荣获“2015金互联·卓越应用平台奖”</h1>
+                            <span class="time">{{ acticle_details.date_publish | date:"Y-m-d H:i:s" }}</span>
+							<span class="time">来源：</span>
+                            <span class="time">{{ acticle_details.source }}</span>
+                        </div>
+                        <div class="news-cont htmleditor">
+                            {{ acticle_details.content | safe}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

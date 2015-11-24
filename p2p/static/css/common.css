@@ -1,0 +1,44 @@
+@charset "utf-8";
+/**
+* Description: common style
+**/
+/*public style*/
+a{ color:#4f4e4e; text-decoration:none; outline:none;-moz-user-select:none;}
+a:hover{ text-decoration:underline;}
+.w1100{width:1100px; margin:0px auto;}
+.w147{ width:147px;}
+.w173{ width:173px;}
+.w137{ width:137px;}
+.w144{ width:144px;}
+/*HTML5 常用标签*/
+.main{ width:1100px; margin:0 auto;}
+
+/*导航*/
+.ui-box { background: #FFF; border: 1px solid #e5e5e5; }
+.ui-box .h-title { background: #fcfcfc; height: 47px; line-height: 47px; border-bottom: 1px solid #e5e5e5; }
+.ui-box .h-title h2,.ui-box .sub-nav,.ui-box .h-line{float: left}
+/*.ui-box .h-line{width: 1px;height: 24px;border-left:1px dotted #d0d0d0;margin: 13px 0 0 18px; }*/
+.ui-box .h-title h2 { font-size: 18px; color: #1a1f25; padding-left: 15px;}
+.ui-box .h-title h2 i { background: #f3491f; border: 1px solid #e43b19; width: 3px; height: 18px; margin-right: 14px; display: inline-block; vertical-align: middle; margin-top: -3px; }
+.ui-box .sub-nav { border: none; margin: 0 0 0 32px;  float: left; }
+.ui-box .sub-nav li { height: 47px; line-height: 47px; text-align: center; float: left; margin-right: 40px; display: inline; color: #a6a6a6;font-size: 14px }
+.ui-box .sub-nav li.select a,.ui-box  .sub-nav li a:hover { background: none; color: #e6300a; border-bottom: 3px solid #f75939; }
+.ui-box .sub-nav li a { height: 44px; display: block; font-size: 14px; border-radius: 3px 3px 0px 0px; padding:0 5px }
+.ui-box .r-decs{float: right;margin-right: 32px;font-size: 12px;}
+
+/*新闻左导航*/
+.ui-new-sidebar { padding: 6px; width: 148px; border: 1px solid #e3e3e3; background: #fff; float: left; min-height: 320px;}
+.ui-new-sidebar .new-tab li { height: 38px; line-height: 38px; padding-left: 18px; font-size: 18px; }
+.ui-new-sidebar .new-tab li.select { background: #f4f2f2; }
+.ui-new-sidebar .new-tab li a { color: #252525;}
+.ui-new-sidebar .new-tab li.select a { color: #f96648 }
+
+/*新闻右侧*/
+.ui-new-mainbody{ width:920px; float:right; font-size:14px;}
+
+/*分页*/
+.ui-pages { text-align: center; font-weight: lighter; font-size: 12px }
+.ui-pages .current { background: #ff9a87; border: 1px solid #f8684d; color: #FFF; }
+.ui-pages a, .ui-pages .current { height: 23px; line-height: 23px; padding: 0px 7px; display: inline-block; }
+.ui-pages a { color: #666; border: 1px solid #e7e7e7; text-decoration: none; }
+.ui-pages a:hover { background: #ffe7e3; border: 1px solid #fec8ba; }

@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap">
+<div class="blank"></div>
+<div class="user_nav f_l mr5">
+<style>
+.user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
+.user_nav h2{font-size:18px; padding:10px 19px;}
+.user_nav li{line-height:38px; padding:0px 6px; position: relative;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:114px !important;}
+.user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+</style>
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li class="user_select"><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><!----><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="http://www.firstp2p.com/account/charge"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="http://www.firstp2p.com/account/carry"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="http://www.firstp2p.com/account/money"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="http://www.firstp2p.com/account/loan"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="http://www.firstp2p.com/account/refund"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="http://www.firstp2p.com/account/contract"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+        <li><a href="http://www.firstp2p.com/account/coupon"><i class="ico_yaoqing"></i>邀请返利</a></li>
+        <li><a href="http://www.firstp2p.com/account/bonus"><i class="ico_redp"></i>网信红包</a></li>
+        <li><a href="http://www.firstp2p.com/user/loanIntentionEnter"><i class="ico_redp"></i>我想借款</a></li>
+    <!--li ><a href="/seller/list"><i class="ico_redp"></i>商家服务</a></li-->
+</ul>
+<!--个人中心左侧开始-->
+
+</div>
+<div class="user_right f_l">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/user_web2.css' %}">
+<style>
+.shouyi{
+    font-family:'Microsoft YaHei';
+}
+</style>
+<div class="user_right">
+        <!-- 用户信息 -->
+        <div class="user_right_box  mb20 pb20">
+                    <div class="user_title"><a class="f14 fr pr30 color-black" href="/index/install/">个人设置<i class="ico_more"></i></a>
+                        <h1><i class="ico_yonghu"></i>用户信息</h1></div>
+                                        <div class="acount_user clearfix">
+                        <div class="user_l"><span class="icon_user tx_male "></span></div>
+                        <div class="user_r">
+                            <div class="user_tit f18">您好， {{ user_list.real_name }}<span class="log_time pl35 f14">上次登录时间：{{ user_list.last_log_time | date:'Y/m/d H:i:s' }}&nbsp;&nbsp;上次登录地址：{{ user_list.last_log_ip }}</span></div>
+                            <div class="user_con">
+                                <div class="u_name"><a href="/index/install/" class="user_a"><i class="icon_user un" title="用户名"></i></a>{{ user_list.username }}</div>
+                                <div class="u_phone"><a href="/index/install/" class="user_a"><i class="icon_user up" title="手机号码"></i></a>{{ user_list.user_phone }}</div>
+                                <div class="u_bank">
+                                    <a href="/index/install/" class="user_a">
+                                        <i class="icon_user ub_has" title="银行卡号"></i>
+                                    </a>中国建设银行<span class="pl15">6217***********8161</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //用户信息 -->
+
+        <div class="user_right_box  mb20 pb20">
+            <div class="user_title"><h1><i class="ico_zhanghu"></i>账户信息</h1></div>
+            <table class="yh_tab f14 mt20" width="100%">
+                <colgroup>
+                    <col width="140">
+                    <col width="350">
+                    <col width="430">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>可用余额：</th>
+                        <td><em class="color-yellow1">0.00&nbsp;</em>元</td>
+                        <td rowspan="3">
+                            <div class="lgl_money">
+                                <p></p><div class="w115 fl tr">通知贷金额：</div><span class="color-yellow1">0</span><p></p>
+                                <p><a href="http://www.firstp2p.com/account/load?type=1" class="button_tx fr mr10">申请赎回</a></p><div class="w115 fl tr">可申请赎回金额：</div><span class="color-yellow1">0</span><p></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    <th>现金金额：</th>
+                        <td><em class="color-yellow1 xj-em">0.00&nbsp;</em>元<a href="http://www.firstp2p.com/account/charge" class="button_cz">充值</a> <a href="http://www.firstp2p.com/account/carry" class="button_tx">提现</a></td>
+                    </tr>
+                    <tr>
+
+                    <th>红包金额：</th>
+                        <td>0.00&nbsp;元</td>
+                    </tr>
+
+                    <tr>
+                    <th>冻结金额：</th>
+                        <td>0.00&nbsp;元</td>
+                        <td rowspan="2"><div class="pt3"><i class="ico_tou"></i><span class="w70 tr" style="display:inline-block">总投资额：</span><strong class="color-yellow1">0.00</strong>&nbsp;元 </div></td>
+                    </tr>
+                    <tr>
+                    <th>待收本金：</th>
+                        <td>0.00&nbsp;元</td>
+                    </tr>
+                    <tr>
+                    <th>待收收益：</th>
+                        <td>0.00&nbsp;元</td>
+                        <td rowspan="2"><div><i class="ico_shou"></i><span class="w70 tr" style="display:inline-block">累计收益：</span><strong class="color-yellow1">0.00</strong>&nbsp;元 </div></td>
+                    </tr>
+                    <tr>
+                    <th>资产总额：</th>
+                        <td><em class="color-yellow1">0.00&nbsp;</em>元</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="user_right_box mb20">
+        <div class="user_title"><a class="f14 fr pr30 color-black" href="http://www.firstp2p.com/account/load">更多<i class="ico_more"></i></a><h1><i class="ico_toubiao"></i>投标概况</h1></div>
+            <div class="w710 mauto pb20">
+            <table class="plan">
+                <colgroup>
+                        <col width="370">
+                        <col width="113">
+                        <col width="375">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th><div class="tl pl30">状态</div></th>
+                            <th>笔数</th>
+                            <th><div class="tr pr25">金额（元）</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                        <tr>
+                        <td><div class="tl pl25">回款中</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                        <tr class="tr_bg">
+                        <td><div class="tl pl25">投标中</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                        <tr>
+                        <td><div class="tl pl25">已回款</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                        <tr class="tr_bg">
+                        <td><div class="tl pl25">总计</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                        </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="user_right_box mb20">
+        <div class="user_title"><a class="f14 fr pr30 color-black" href="http://www.firstp2p.com/account/loan">更多<i class="ico_more"></i></a><h1><i class="ico_huikuan"></i>回款计划</h1></div>
+            <div class="w710 mauto pb20">
+            <table class="plan">
+                    <colgroup>
+                        <col width="370">
+                        <col width="113">
+                        <col width="375">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                            <th><div class="tl pl25">时间</div></th>
+                            <th>笔数</th>
+                            <th><div class="tr pr15">金额（元）</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                            <tr>
+                            <td><div class="tl pl25">本月</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                            <tr class="tr_bg">
+                            <td><div class="tl pl25">下月</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                            <tr>
+                            <td><div class="tl pl25">本年</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                            <tr class="tr_bg">
+                            <td><div class="tl pl25">总计</div></td>
+                            <td>0</td>
+                            <td><div class="tr pr25 f16">0.00</div></td>
+                        </tr>
+                                        </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="user_right_box mb20">
+            <div class="user_title"><a class="f14 fr pr30 color-black" href="http://www.firstp2p.com/account/money">更多<i class="ico_more"></i></a><h1><i class="ico_jilu"></i>资金记录</h1></div>
+            <div class="w710 mauto pb20">
+                <table class="plan">
+                    <colgroup>
+                    <col width="173">
+                    <col width="152">
+                    <col width="160">
+                    <col width="145">
+                    <col width="226">
+                </colgroup>
+                    <thead>
+                        <tr>
+                        <th>时间</th>
+                            <th>类型</th>
+                            <th>冻结/解冻（元）</th>
+                            <th>资金变动（元）</th>
+                            <th><div class="pr25">备注</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                        </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="user_right_box">
+        <div class="user_title"><h1><i class="ico_jilu"></i>账户七天充值记录</h1></div>
+            <div class="w710 mauto pb20">
+            <table class="plan">
+                <colgroup>
+                    <col width="230">
+                    <col width="200">
+                    <col width="152">
+                    <col width="160">
+                    <col width="133">
+                </colgroup>
+                    <thead>
+                    <tr>
+                    <th><div class="pl15">充值单号</div></th>
+                            <th>充值金额（元）</th>
+                            <th>状态</th>
+                            <th>充值时间</th>
+                            <th><div class="pr25">订单生成时间</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+    //修改
+    function editor_bankInfo() {
+        window.location.href='/account/editbank';
+    }
+    </script>
+</div>
+
+<div class="blank"></div>
+
+</div>
+{% endblock %}

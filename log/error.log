@@ -1,0 +1,223 @@
+2015-11-16 11:34:16,434 [Thread-19:140647495366400] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 11:38:39,420 [Thread-75:140647864239872] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 11:39:00,001 [Thread-78:140647847454464] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 11:40:14,946 [Thread-89:140647495366400] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 11:40:19,751 [Thread-100:140647484000000] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:08:15,858 [Thread-13:139791267432192] [blog.views:46] [views:regist] [ERROR]- (1054, "Unknown column 'email' in 'field list'")
+2015-11-16 12:09:58,494 [Thread-16:139791267432192] [blog.views:46] [views:regist] [ERROR]- (1054, "Unknown column 'email' in 'field list'")
+2015-11-16 12:12:09,365 [Thread-13:140600673437440] [blog.views:46] [views:regist] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:29:46,881 [Thread-72:140600673437440] [blog.views:46] [views:regist] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:25,043 [Thread-13:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:26,545 [Thread-16:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:27,923 [Thread-19:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:28,790 [Thread-22:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:29,476 [Thread-25:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:30,095 [Thread-28:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:32:30,714 [Thread-31:140228199184128] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:22,389 [Thread-2:139776078309120] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:24,061 [Thread-13:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:24,756 [Thread-16:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:25,370 [Thread-19:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:25,906 [Thread-22:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:26,363 [Thread-25:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:26,811 [Thread-28:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:27,269 [Thread-31:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:27,675 [Thread-34:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:28,123 [Thread-37:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:28,580 [Thread-40:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:29,033 [Thread-43:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:29,270 [Thread-46:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:29,497 [Thread-49:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:29,709 [Thread-52:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:29,890 [Thread-55:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:30,092 [Thread-58:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:30,309 [Thread-61:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:30,625 [Thread-64:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:30,845 [Thread-67:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:31,061 [Thread-70:139776036083456] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:53,174 [Thread-5:140179536865024] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:54,073 [Thread-8:140179520079616] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:55,042 [Thread-11:140179520079616] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:34:56,240 [Thread-14:140179520079616] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:35:16,260 [Thread-2:140617515955968] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:35:17,753 [Thread-5:140617515955968] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:35:18,761 [Thread-8:140617515955968] [blog.views:92] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 12:35:42,208 [Thread-5:140059688826624] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:43,185 [Thread-8:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:43,745 [Thread-11:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:44,467 [Thread-14:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:45,049 [Thread-17:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:45,602 [Thread-20:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:46,050 [Thread-23:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:46,440 [Thread-26:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:46,769 [Thread-29:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:47,174 [Thread-32:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:47,642 [Thread-35:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:48,138 [Thread-38:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:48,744 [Thread-41:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:49,364 [Thread-44:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:49,858 [Thread-47:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:50,695 [Thread-50:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:51,305 [Thread-53:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:51,808 [Thread-56:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:52,369 [Thread-59:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:52,858 [Thread-62:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:35:53,419 [Thread-65:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:02,941 [Thread-68:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:03,787 [Thread-71:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:04,401 [Thread-74:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:05,050 [Thread-77:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:05,587 [Thread-80:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:06,097 [Thread-83:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:06,679 [Thread-86:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:07,233 [Thread-89:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:07,770 [Thread-92:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:08,291 [Thread-95:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:08,786 [Thread-98:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:09,296 [Thread-101:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:09,817 [Thread-104:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:10,312 [Thread-107:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 12:36:10,827 [Thread-110:140059672041216] [blog.views:92] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 13:00:58,665 [Thread-13:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:00,237 [Thread-16:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:00,896 [Thread-19:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:01,564 [Thread-22:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:02,271 [Thread-25:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:02,895 [Thread-28:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:03,527 [Thread-31:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:04,069 [Thread-34:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:04,574 [Thread-37:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:05,017 [Thread-40:140618831488768] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:08,491 [Thread-46:140619066054400] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:43,542 [Thread-2:140703776634624] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:44,485 [Thread-5:140703776634624] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:01:46,975 [Thread-8:140703776634624] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:21,242 [Thread-2:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:22,218 [Thread-5:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:22,990 [Thread-8:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:23,613 [Thread-11:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:24,191 [Thread-14:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:24,871 [Thread-17:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:25,534 [Thread-20:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:02:26,349 [Thread-23:140301844240128] [blog.views:93] [views:login] [ERROR]- 'QuerySet' object has no attribute 'username'
+2015-11-16 13:09:16,937 [Thread-14:139977346250496] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:09:18,042 [Thread-17:139977346250496] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:09:18,888 [Thread-20:139977346250496] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:09:19,810 [Thread-23:139977346250496] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:09:23,409 [Thread-26:139977346250496] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:09:24,498 [Thread-29:139977346250496] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:09:36,144 [Thread-49:139977708037888] [blog.views:93] [views:login] [ERROR]- name 'self' is not defined
+2015-11-16 13:46:40,870 [Thread-2:140612624283392] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:46:42,630 [Thread-12:140612615890688] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:46:43,605 [Thread-15:140612615890688] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:35,621 [Thread-32:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:36,928 [Thread-34:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:37,709 [Thread-35:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:38,730 [Thread-36:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:39,410 [Thread-37:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:39,967 [Thread-38:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:40,492 [Thread-39:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:40,976 [Thread-40:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:45,976 [Thread-41:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 13:53:50,064 [Thread-43:139880228247296] [blog.views:94] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 14:36:10,420 [Thread-12:139927744407296] [blog.views:93] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 14:36:12,267 [Thread-13:139927744407296] [blog.views:93] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 14:36:13,045 [Thread-14:139927744407296] [blog.views:93] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 14:36:57,481 [Thread-8:139839272814336] [blog.views:93] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 14:37:08,169 [Thread-13:139838900664064] [blog.views:93] [views:login] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-16 14:41:19,373 [Thread-4:140149996140288] [blog.views:95] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 14:41:53,129 [Thread-2:140332016596736] [blog.views:95] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 14:42:22,068 [Thread-12:140069873755904] [blog.views:95] [views:login] [ERROR]- argument of type 'NoneType' is not iterable
+2015-11-16 14:44:18,818 [Thread-3:140689112921856] [blog.views:46] [views:regist] [ERROR]- login() takes 1 positional argument but 2 were given
+2015-11-18 10:47:34,930 [Thread-4:140388656477952] [blog.views:52] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:47:49,094 [Thread-8:140388656477952] [blog.views:102] [views:login] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:49:33,002 [Thread-9:140482667603712] [blog.views:102] [views:login] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:51:14,013 [Thread-15:140482634032896] [blog.views:102] [views:login] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:51:31,125 [Thread-29:140482634032896] [blog.views:52] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:00,404 [Thread-2:140231084865280] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:01,919 [Thread-3:140231084865280] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:03,110 [Thread-4:140231084865280] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:04,164 [Thread-5:140231084865280] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:05,533 [Thread-6:140231084865280] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:22,038 [Thread-2:140034103297792] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:23,189 [Thread-3:140034103297792] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:25,934 [Thread-4:140034103297792] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:53:54,291 [Thread-17:140034103297792] [blog.views:53] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:18,595 [Thread-2:139784400348928] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:20,131 [Thread-15:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:20,948 [Thread-16:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:21,531 [Thread-17:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:22,040 [Thread-18:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:22,563 [Thread-19:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:23,061 [Thread-20:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:23,334 [Thread-21:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:23,548 [Thread-22:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:23,955 [Thread-23:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:24,380 [Thread-24:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:24,774 [Thread-25:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:24,986 [Thread-26:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:25,428 [Thread-27:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:56:26,243 [Thread-28:139784380851968] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:11,534 [Thread-70:139784355411712] [blog.views:105] [views:login] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:12,282 [Thread-71:139784355411712] [blog.views:105] [views:login] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:21,148 [Thread-73:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:21,948 [Thread-74:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:22,498 [Thread-75:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:22,754 [Thread-76:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:23,116 [Thread-77:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:23,482 [Thread-78:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:23,851 [Thread-79:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:24,263 [Thread-80:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:24,644 [Thread-81:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-18 10:57:25,007 [Thread-82:139784355411712] [blog.views:55] [views:regist] [ERROR]- Unicode-objects must be encoded before hashing
+2015-11-23 16:19:05,862 [Thread-30:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:07,428 [Thread-31:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:08,380 [Thread-32:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:08,964 [Thread-33:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:09,188 [Thread-34:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:09,389 [Thread-35:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:09,555 [Thread-36:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:10,076 [Thread-37:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:10,453 [Thread-38:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:10,941 [Thread-39:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:37,315 [Thread-40:140145904633600] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:38,707 [Thread-51:140145868089088] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:19:58,716 [Thread-52:140145868089088] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:20:00,301 [Thread-63:140145884874496] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:20:01,080 [Thread-64:140145884874496] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:20:01,779 [Thread-65:140145884874496] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:20:02,452 [Thread-66:140145884874496] [blog.views:110] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:00,499 [Thread-27:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:01,513 [Thread-28:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:02,089 [Thread-29:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:02,562 [Thread-30:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:03,105 [Thread-31:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:03,609 [Thread-32:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:04,190 [Thread-33:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:04,843 [Thread-34:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:25:09,900 [Thread-35:140665144997632] [blog.views:113] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:27:24,754 [Thread-15:140431799084800] [blog.views:117] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:27:26,315 [Thread-26:140431807477504] [blog.views:117] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:27:27,171 [Thread-27:140431807477504] [blog.views:117] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:27:28,087 [Thread-28:140431807477504] [blog.views:117] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:28:35,253 [Thread-3:140626910889728] [blog.views:114] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:28:36,630 [Thread-4:140626910889728] [blog.views:114] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:28:37,130 [Thread-5:140626910889728] [blog.views:114] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:28:37,395 [Thread-6:140626910889728] [blog.views:114] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:28:37,637 [Thread-7:140626910889728] [blog.views:114] [views:login] [ERROR]- getIPFromDJangoRequest() missing 2 required positional arguments: 'self' and 'request'
+2015-11-23 16:28:55,530 [Thread-2:139780424619776] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:28:59,267 [Thread-14:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:28:59,947 [Thread-15:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:29:00,211 [Thread-16:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:29:00,426 [Thread-17:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:29:00,858 [Thread-18:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:29:01,066 [Thread-19:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:29:01,250 [Thread-20:139780037797632] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:34:53,639 [Thread-4:140363549259520] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:34:54,670 [Thread-5:140363549259520] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:34:55,461 [Thread-6:140363549259520] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:34:55,959 [Thread-7:140363549259520] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:35:14,188 [Thread-3:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:35:15,069 [Thread-4:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:35:15,533 [Thread-5:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-23 16:35:15,749 [Thread-6:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'

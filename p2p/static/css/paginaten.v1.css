@@ -1,0 +1,46 @@
+.hide { display: none; }
+.show { display: block; }
+.paginatio { text-align: center; font-size: 14px;padding:25px 0px; border-top:1px solid #e0dede; }
+.paginatio ul { margin: 0; padding: 0; list-style: none;  }
+.paginatio ul li { margin: 0 3px; padding: 0; display: inline-block;  *zoom: 1;
+ *display: inline;
+vertical-align: top;text-align:center }
+.paginatio ul li.to { width: auto; }
+.paginatio ul li.pgcoder { width: auto; }
+.paginatio ul li.wrapinput { width: auto; }
+.paginatio ul li a { display: inline-block;  *zoom: 1;
+ *display: inline;
+width: 36px; height: 36px; line-height: 36px; text-decoration: none; color: #303030; font-family: arial; border: 1px solid #e7e7e7; }
+.paginatio ul li a:hover { color: white; background: #ffe7e3; border: 1px solid #fec8ba; color:#3d3d3d; }
+.paginatio ul li span { display: inline-block;  *zoom: 1;
+ *display: inline;
+width: 36px; height: 36px; line-height: 36px; color: #303030; }
+.paginatio ul li span.ellipse { font-family: 'simsun'; }
+.paginatio ul li span.current { display: inline-block; color: white; background: #ff9a87; border: 1px solid #fc633d; }
+.paginatio ul li span.prev,.paginatio ul li span.next { width: 74px; background: #FFF;color:#cccccc;border:1px solid #e7e7e7;}
+.paginatio ul li a.prev { width: 74px; }
+.paginatio ul li a.prev:hover { }
+.paginatio ul li a.next { width: 74px; }
+.paginatio ul li a.next:hover { }
+.paginatio ul li.wrapinput { margin: 3px 0; padding: 0 23px 0 5px; width: 22px; background: url(sf_paging.png) no-repeat -2px -98px; _background: url(sf_paging.gif) no-repeat -2px -98px; }
+.paginatio ul li input.pageinput { padding: 6px 0; width: 22px; height: 12px; line-height: 12px; font-size: 12px; border: 0 none; outline: 0 none; background: none; }
+.paginatio ul li .graytext { color: #838383; width: auto; }
+.paginatio2 { text-align: right; height: 14px; }
+.paginatio2 ul { margin: 0; padding: 0; list-style: none; height: 14px; }
+.paginatio2 ul li { margin-left: 18px; padding: 0; display: inline-block;  *zoom: 1;
+ *display: inline;
+height: 14px; line-height: 14px; vertical-align: top; _vertical-align: baseline; }
+.paginatio2 ul li a { display: inline-block;  *zoom: 1;
+ *display: inline;
+height: 14px; line-height: 14px; text-decoration: none; color: #838383; font-family: arial; }
+.paginatio2 ul li a:hover { color: #303030; }
+.paginatio2 ul li span { display: inline-block;  *zoom: 1;
+ *display: inline;
+height: 14px; line-height: 14px; }
+.paginatio2 ul li span.ellipse { font-family: 'simsun'; }
+.paginatio2 ul li span.current { color: #303030; font-weight: bold; }
+.paginatio2 ul li span.prev { width: 8px; height: 14px; background: url(sf_paging.png) no-repeat -69px -107px; _background: url(sf_paging.gif) no-repeat -69px -106px; }
+.paginatio2 ul li span.next { width: 8px; height: 14px; background: url(sf_paging.png) no-repeat -86px -107px; _background: url(sf_paging.gif) no-repeat -86px -106px; }
+.paginatio2 ul li a.prev { width: 8px; height: 14px; background: url(sf_paging.png) no-repeat -69px -88px; _background: url(sf_paging.gif) no-repeat -69px -87px; }
+.paginatio2 ul li a.next { width: 8px; height: 14px; background: url(sf_paging.png) no-repeat -86px -88px; _background: url(sf_paging.gif) no-repeat -86px -87px; }
+

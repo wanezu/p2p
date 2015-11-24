@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+	<!-- header-section-ends -->
+    <link href="{% static 'css/index_v2.all.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <script src="{% static 'js/common_v2.all.min.js' %}"></script>
+	<div class="p_deal">
+        <section class="main">
+            <div class="ui_product_tab box mb30">
+                <div class="product_type">
+                    <div class="fl title"><i class="icon_line mr15"></i>P2P理财</div>
+                </div>
+                <div class="tabbd">
+                    <div class="con">
+                        <div class="conbd">
+                            {% for trade in trade_arri %}
+                            {% for children_comment in trade.children_comment %}
+                            <div class="p2p_product p5">
+                                <div class="clearfix bg_whtie">
+                                    <div class="con_l">
+                                        <h3 class="f16">
+                                            <i class="icon_YSD"></i>
+                                            {% if children_comment.1 != 0 %}
+                                                <a title="{{ trade.title }}" alt="{{ trade.title }}" href="/index/trade_list?id={{ trade.id }}" target="_blank">{{ trade.title }}</a>
+                                            {% else %}
+                                                <span title="{{ trade.title }}" alt="{{ trade.title }}" class="deal_tag_name">{{ trade.title }}</span>
+                                            {% endif %}
+                                        </h3>
+                                        <div class="fl w360">
+                                            <p><span>年化收益率：
+                                                <i class="f20">6.70</i>
+                                                <ins class="f20">%</ins></span></p>
+                                            <p>
+                                                <span>总额：</span>
+                                                {{ trade.price }}元
+                                            </p>
+                                        </div>
+                                        <div class="fl w265">
+                                            <p><span>投资期限：</span><em><i class="f18">{{ trade.term }}</i>天</em></p>
+                                            <p><span>收益方式：</span>{{ trade.incomemode }}</p>
+                                        </div>
+                                            <div class="fl w265 progress_rate" total="{{ children_comment.2 }}" has="{{ children_comment.0 }}">
+                                                <p>
+                                                    <span>投资进度：</span><span class="progress">
+                                                        <i class="ico_bace"></i>
+                                                        <i class="ico_yitou">进度条</i>
+                                                    </span><ins class="f12 pl5"></ins>
+                                                </p>
+                                                <p><span>剩余可投：</span>{{ children_comment.1 }}元</p>
+                                            </div>
+                                    </div>
+                                    <div class="product_btn">
+                                        {% if children_comment.1 != 0 %}
+                                            <a href="" class="btn_touzi">投资</a>
+                                        {% else %}
+                                            <span class="btn_manbiao">满标</span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                        {% include 'pagination.html' %}
+                    </div>
+                </div>
+            <link rel="stylesheet" type="text/css" href="{% static 'css/paginaten.v1.css' %}">
+        </section>
+    </div>
+<script type="text/javascript">
+;(function (){
+    //项目进度
+    progress_rate($('.progress_rate'));
+    function progress_rate(ele) {
+        ele.each(function(i, el) {
+            var ele = $(el);
+            var total = ele.attr('total');
+            var has = ele.attr('has');
+            var REG = /^[\d\.]+$/;
+            var percent = 0;
+            if (!(REG.test(total) && REG.test(has))) {
+                return;
+            }
+            total = Math.floor(total.replace(/\..*/, ''));
+            has = Math.floor(has.replace(/\..*/, ''));
+            percent = (Math.floor((has / total) * 10000) / 100).toFixed(2) + "%";
+            ele.find('.ico_yitou').css("width", percent);
+            ele.find('.pl5').html(percent);
+            // console.log(i, total, has, percent);
+        });
+    }
+})('p2p理财页面');
+</script>
+{% endblock %}

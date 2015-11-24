@@ -1,0 +1,14 @@
+<!-- 分页 -->
+<div class="new-page">
+    <div class="ui-pages">
+        <span>{{ notice_list.number }}/{{ notice_list.paginator.num_pages }} 页</span>
+        {% if notice_list.has_previous %}
+            <a class="prev" href="?page={{ notice_list.previous_page_number }}">上一页</a>
+        {% endif %}
+        <span class="current">{{ notice_list.number }}</span>&nbsp;
+        {% if notice_list.has_next %}
+            <a class="next" href="{{ notice_list.next_page_number }}">下一页</a>
+        {% endif %}
+    </div>
+</div>
+<!-- //分页 -->

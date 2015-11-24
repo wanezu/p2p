@@ -1,0 +1,34 @@
+.p_account_personalset{color:#1a1a1a}
+.p_account_personalset a:hover { text-decoration: none }
+.p_account_personalset a.blue { display: inline-block; text-decoration: underline; }
+.p_account_personalset { font-size: 14px; }
+.p_account_personalset .r-cont { padding: 14px  34px 65px; min-height: 348px; }
+.p_account_personalset .sms-subs { padding: 18px 0 18px; border-bottom: 1px dashed #d1d1d1 }
+.p_account_personalset .sms-subs.bor-b0 {padding-top: 32px;}
+.p_account_personalset .bor-b0 { border-bottom: none }
+.p_account_personalset .subs-tit {  width: 80px;margin-bottom: 22px;}
+.p_account_personalset .subs-tit, ul.security-list li label { color: #606060;  }
+.p_account_personalset .subs-cont-wrap { width: 850px; }
+.p_account_personalset .subs-cont span.gray, .subs-cont ul { float: left; display: block; }
+.p_account_personalset .subs-cont ul { width: 558px; }
+.p_account_personalset .subs-cont span.gray { width: 120px;  }
+.p_account_personalset .subs-cont ul li { float: left; width: 135px; padding-bottom:22px;}
+.p_account_personalset .subs-cont ul li input { vertical-align: middle; margin-right: 5px; }
+.p_account_personalset .sum-btn { text-align: center; margin-top: 20px; }
+.p_account_personalset ul.security-list li label { width: 97px; }
+.p_account_personalset ul.security-list li .sec-info { width: 337px; }
+.p_account_personalset ul.security-list li { height: 57px; line-height: 57px; background: url(../images/bg_line.png) left bottom repeat-x; }
+
+.p_account_personalset ul.security-list li i { width: 23px; height: 23px; background: url(../images/icon-set.png) no-repeat; display: inline-block; margin: 17px 8px 0 25px }
+.p_account_personalset ul.security-list li i.yes { background-position: 0 0; }
+.p_account_personalset ul.security-list li i.no { background-position: -47px 0; }
+.p_account_personalset ul.security-list li label, ul.security-list li span, ul.security-list li i { float: left; display: inline-block; }
+.p_account_personalset ul.security-list li span { width: 225px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p_account_personalset ul.security-list li span.status { width: 60px; color: #606060 }
+.p_account_personalset ul.security-list li a.blue { float: right; display: inline-block; }
+.p_account_personalset .subs-cont ul li a,  .p_account_personalset .subs-cont ul li span.checked-disable{ margin-right: 5px; *margin-right: 10px;vertical-align: -2px; *vertical-align: 1px; }
+.p_account_personalset .subs-cont ul li .p2p-ui-checkbox span:hover{cursor: pointer;}
+.p_account_personalset .subs-cont ul li .p2p-ui-checkbox span.cur-txt{cursor: text; }
+.weedialog .dialog-content{text-align: center;}
+.wee-pwp a:hover{text-decoration: none}
+.wee-pwp .pwp-decr{color:#656565;margin-bottom:35px;}

@@ -1,0 +1,123 @@
+{% load staticfiles %}
+	<div class="our-clients">
+		<div class="container">
+			<div class="our-clients-head text-center">
+				<h3>Our Clients</h3>
+			</div>
+			<!---strat-image-cursuals---->
+                  <div class="scroll-slider">
+							<div class="nbs-flexisel-container">
+							<div class="nbs-flexisel-inner">
+							<ul class="flexiselDemo3 nbs-flexisel-ul" style="left: -253.6px; display: block;">
+							<li><img src="{% static 'images/c1.jpg' %}"></li>
+							<li><img src="{% static 'images/c2.jpg' %}"></li>
+							<li><img src="{% static 'images/c3.jpg' %}"></li>
+							<li><img src="{% static 'images/c4.jpg' %}"></li>
+							<li><img src="{% static 'images/c1.jpg' %}"></li>
+							<li><img src="{% static 'images/c2.jpg' %}"></li>
+							<li><img src="{% static 'images/c3.jpg' %}"></li>
+							<li><img src="{% static 'images/c4.jpg' %}"></li>
+							</ul>
+							<div class="nbs-flexisel-nav-left" style="display:none"></div>
+							<div class="nbs-flexisel-nav-right" style="display:none"></div></div></div>
+							<div class="clear"> </div>
+						  <!---strat-image-cursuals---->
+								<script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
+								<!---End-image-cursuals---->
+								<script type="text/javascript">
+								$(window).load(function() {
+								    $(".flexiselDemo3").flexisel({
+								        visibleItems: 4,
+								        animationSpeed: 1000,
+								        autoPlay: true,
+								        autoPlaySpeed: 3000,
+								        pauseOnHover: true,
+								        enableResponsiveBreakpoints: true,
+								        responsiveBreakpoints: {
+								            portrait: {
+								                changePoint:480,
+								                visibleItems: 1
+								            },
+								            landscape: {
+								                changePoint:640,
+								                visibleItems: 2
+								            },
+								            tablet: {
+								                changePoint:768,
+								                visibleItems: 3
+								            }
+								        }
+								    });
+								});
+								</script>
+						<!---->
+				  <!---->
+				  </div>
+        </div>
+        <div class="testimonials-section">
+			<div class="container">
+				<div class="testimonials-section-head text-center">
+					<h3>Testimonials</h3>
+				</div>
+				<div class="members">
+					<div class="col-md-4 member1">
+						<img src="{% static 'images/mem.jpg' %}" alt="" />
+						<div class="text text-center">
+							<h4>John Doe</h4>
+							<p>CEO, Company.com</p>
+						</div>
+					</div>
+					<div class="col-md-8 description">
+						<div class="course_demo">
+                            <ul id="flexiselDemo4">
+                                <li>
+                                    <div class="client-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="client-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="client-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+                                    </div>
+                                </li>
+                            </ul>
+	                    </div>
+                        <script type="text/javascript">
+                            $(window).load(function() {
+                                $("#flexiselDemo4").flexisel({
+                                    visibleItems: 1,
+                                    animationSpeed: 1000,
+                                    autoPlay: true,
+                                    autoPlaySpeed: 3000,
+                                    pauseOnHover: true,
+                                    enableResponsiveBreakpoints: true,
+                                    responsiveBreakpoints: {
+                                        portrait: {
+                                            changePoint:480,
+                                            visibleItems: 1
+                                        },
+                                        landscape: {
+                                            changePoint:640,
+                                            visibleItems: 1
+                                        },
+                                        tablet: {
+                                            changePoint:768,
+                                            visibleItems: 1
+                                        }
+                                    }
+                                });
+
+                            });
+                        </script>
+		                <script type="text/javascript" src="{% static 'js/jquery.flexisel.js' %}"></script>
+				    </div>
+					<div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>

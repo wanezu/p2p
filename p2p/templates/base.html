@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ SITE_URL }}</title>
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/header_footer.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="UNITED COMMS Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+				<a  class="active" href=""><img src="{% static 'images/logo.png' %}" class="img-responsive" alt="" /></a>
+			</div>
+			<div class="header-right">
+				<h4><i class="phone"></i>(256) 152 3658</h4>
+				<span class="menu"></span>
+				<div class="top-menu">
+					<ul>
+						<li><a class="active" href="/index/index/">首页</a></li>
+						<li><a href="/index/trade/">我要投资</a></li>
+						<li><a href="about.html">我要借款</a></li>
+						<li><a href="/index/notice">关于我们</a></li>
+                        {% if login == 1 %}
+						    <li><a href="/index/member/">我的账户</a></li>
+                        {% else %}
+						    <li><a href="/home/login/">登录</a>/<a href="/home/regist/">注册</a></li>
+                        {% endif %}
+					</ul>
+				</div>
+				<!-- script for menu -->
+				<script>
+				$( "span.menu" ).click(function() {
+				  $( ".top-menu" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+			</script>
+			<!-- script for menu -->
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- header-section-ends -->
+    {% block left_content %}{% endblock %}
+	<div class="footer m_footer">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>北京Cecotw科技有限公司© 2015 p2p理财 All rights reserved 京ICP证******号</p>
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>

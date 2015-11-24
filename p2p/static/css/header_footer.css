@@ -1,0 +1,12 @@
+/*底部css*/
+.m_footer .f_left{ width:330px; float:left; height:180px;}
+.m_footer .logo{ width:198px; height:46px; background-position:0px -87px; display:block;}
+.m_footer .f_center{ height:150px;}
+.m_footer .f_center ul{ float:left; font-size:18px; color:#fff;}
+.m_footer .f_center ul a{ font-size:14px; color:#999;}
+.m_footer .f_right{ width:90px; float:right;height:150px; text-align:center;}
+.m_footer .f_right .code{ width:90px; height:82px; background-position:7px -141px;}
+.m_footer .iphone_down,.m_footer .andriod_down{ width:98px; height:30px; border:1px solid #767675; border-radius:3px; background:#5c5c5c; color:#fff; display:none; line-height:30px; text-align:center; margin-bottom:17px;}
+.m_footer .iphone_down:hover,.m_footer .andriod_down:hover{ text-decoration:none;}
+.m_footer .icon_iphone{ background-position:-101px 0px; width:16px; height:20px; display:none; vertical-align:middle;}
+.m_footer .icon_andriod{ background-position:-124px 0px; width:17px; height:20px; display:none; vertical-align:middle; margin-top:-2px;}

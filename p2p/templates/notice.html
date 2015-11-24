@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+<script type="text/javascript" src="{% static 'js/back.v1.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/p-news-media.css' %}">
+<link href="{% static 'css/index_v2.all.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script src="{% static 'js/common_v2.all.min.js' %}"></script>
+    <div class="main  pt23 pb30 clearfix">
+        <div class="ui-new-sidebar">
+            <ul class="new-tab">
+                <li><a href="/index/media">媒体报道</a></li>
+                <li class="select"><a href="/index/notice">平台公告</a></li>
+            </ul>
+        </div>
+        <div class="ui-new-mainbody">
+            <div class="p_news_media">
+                <div class="ui-box">
+                    <div class="h-title">
+                        <h2><p style="margin-top: 12px;"><i></i>平台公告</p></h2>
+                    </div>
+                    <div class="new-r">
+                        {% for notice in notice_list %}
+                        <div class="news-list">
+                            <h3 class="h-list"><img alt="" src="{% static 'images/libg.jpg' %}"><a title="{{ notice.title }}" href="/index/notice_de?id={{ notice.id }}">{{ notice.title }}</a></h3>
+                            <span class="time">{{ notice.date_publish | date:'Y-m-d H:i:s' }}</span>
+                            <span class="time" style="margin-left:16px;">来源：{{ notice.title }}</span>
+                            <p>{{ notice.desc }}</p>
+                        </div>
+                        {% endfor %}
+                        {% include 'page_notice.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

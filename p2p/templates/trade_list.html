@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+	<!-- header-section-ends -->
+<div class="wrap" style="margin-top: 30px;">
+<link href="{% static 'css/v11.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/investment_view_web2.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'js/cookie.js' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'js/investment_view.js' %}">
+<div class="box">
+    <section>
+        <div class="touzi_top clearfix">
+            <div class="tztop_left fl">
+                <div class="title_box">
+                    <h1 class="pr30">
+                        <span>
+                            <em>{{ trade_details.title }}</em>
+                            <em class="f14 pl15">编号: {{ trade_details.id }}</em>
+                        </span>
+                        <span class="w1"></span>
+                    </h1>
+                </div>
+                <div class="tz_lilv fl">
+                    <dl class="clearfix">
+                        <dt>年化收益率：</dt>
+                        <dd>
+                            <i class="ico_seven" alt="7"></i>
+                            <i class="ico_point" alt="."></i>
+                            <i class="ico_five" alt="5"></i>
+                            <i class="ico_zero" alt="0"></i>
+                            <i class="ico_percent" alt="%"></i>
+                        </dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>收益方式：</dt>
+                        <dd class="f14"><span>{{ trade_details.term }}天</span> {{ trade_details.incomemode }}</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt>保障方式：</dt>
+                        <dd>
+                            <span class="f14">担保本息</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="tz_jine fl">
+                    <dl class="clearfix">
+                        <dt>可投金额：</dt>
+                        <dd><em class="f20 yellwo">{{ surplus }}</em>&nbsp;<span class="f16">元</span></dd>
+                    </dl>
+                    <div class="ketou">
+                        投资总额：{{ trade_details.price }}元 / 已投：{{ invest_am }}元 / 100元起投
+                         <i class="ico_progress">
+                             <i class="ico_bace"></i>
+                             <i class="ico_yitou" style="width:{{ speed }}%"></i>
+                         </i>
+                    </div>
+                    <dl class="clearfix">
+                        <dt>剩余时间：</dt>
+                        <dd>
+                            <span class="f14">{{ time_finsh }}</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <form id="computeForm" action="http://www.firstp2p.com/deal/bid/68925" method="post">
+            <div class="tztop_right fr">
+                    <h2>
+                        <span class="text f14" style="padding-left: 0px;">账户余额：</span>
+                        {% if login == 1 %}
+						    <span class="f14">2,000元</span>
+                        {% else %}
+                            <span class="f14"><a href="/home/login/">登录后可见</a></span>
+                        {% endif %}
+                    </h2>
+                    <p class="text">投资金额：<input type="text" name="money" class="text_box" id="invest_input" data-min="100" data-money="" autocomplete="off" data-max="948300.37" data-age_check="1" data-age_min="18" value="948300.37" data-perpent="0.62499999999857%">&nbsp;&nbsp;元 </p>
+                    <p>
+                        <button type="submit" class="button_touzi">投资</button>
+                    </p>
+                    <div class="shouyi ">
+                        <span class="color-gray">净收益：</span>
+                        <em id="income">5,926.88</em>元&nbsp;&nbsp;
+                        <span class="color-gray">净收益率：</span> 0.62% <i class="ico_sigh" title="净收益率=净收益/投资金额"></i><i class="ico_braces_r"></i>
+                    </div>
+                    <span class="fceng color-red1 none" id="invest_tip"></span>
+                </div>
+            </form>
+        </div>
+    </section>
+{#    <section>#}
+{#        <div class="main clearfix">#}
+{#            <div class="box_title"><i class="danbao"></i>担保方介绍</div>#}
+{#            <div class="con_width">#}
+{#                <h2><i class="ico_jianjie"></i>机构简介</h2>#}
+{#                <p>#}
+{#                    北京联合开元融资担保有限公司（下称“公司”）是联合创业担保集团有限公司在北京投资设立的控股子公司，是集团为进一步巩固在环渤海地区竞争优势、拓展北京及周边市场的重要基地。公司注册资金人民币3亿元，为北京市信用担保业协会常务理事单位。主营中小企业融资担保，履约担保及投资管理，投资咨询等。公司成立以来，集团先后派驻了多名高管及担保业务骨干，并从北京当地人才选聘了一批具有金融、经济、会计、法律专业背景和从业经验的专业人才。公司根据集团的业务规划，在集团指导下建立了完整的市场开发、业务操作、风险控制、资产管理等运作体系，储备了一批优质客户资源。公司将通过与政府、银行及其他相关机构建立密切合作关系，为北京及周边地区的中小企业提供优质的金融服务。#}
+{##}
+{#公司目前与国家开发银行、农业发展银行、农业银行、建设银行、交通银行、招商银行、广发银行、浦发银行、天津银行、北京银行等十余家银行建立授信合作关系，截止2013年10月31日，取得授信总额10亿元。#}
+{#中国的中小企业超过4000万家，占中国企业总数的89%。大多数中小企业都存在不同程度的融资问题，集团针对中小企业的融资难题，提供多样化的融资服务，具有卓越的创新能力和巨大的发展潜力。#}
+{#从成立至今，集团公司累计担保额超过121亿元，为10，000多户企业及个人客户提供了融资服务，位于全国担保行业前列。累计支持企业从业人数10余万人，协助企业累计实现销售收入约400亿元，实现利润近50亿元，为地方经济发展做出了卓越的贡献。                </p>#}
+{##}
+{#                                <h2 class="line_bg"><i class="ico_faq"></i>#}
+{#                    <span>担保机制常见问题</span>#}
+{#                </h2>#}
+{#                    <h3 class="yellwo" 20px="" 0px="" 0px;="" rgb(244,="" 137,="" 67);="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" 16px;="" normal;?="">借款人出现逾期、坏账和不还钱怎么办？</h3>#}
+{#<h3 class="yellwo" 20px="" 0px="" 0px;="" rgb(244,="" 137,="" 67);="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" 16px;="" normal;?=""><p style="font-size:12px;font-weight:normal;line-height:18px;" 0px;="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" rgb(135,="" 135,="" 135);="" 14px;="" 0px;?=""><span style="font-size:14px;">如果借款人出现逾期或坏账，对该借贷行为担保的担保机构对每笔借款提供不可撤销的全额本息担保，贷款到期后，借款人出现任何问题，担保机构即会启动代偿机制，按照《保证合同》约定向投资人偿付所有剩余本金及利息。然后担保机构自行负责之后的追偿，催收工作。投资者不会承担合同约定以外的任何损失，安全无风险。</span></p>#}
+{#</h3>#}
+{#<h3 class="yellwo" 20px="" 0px="" 0px;="" rgb(244,="" 137,="" 67);="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" 16px;="" normal;?="">平台如果不存在了，投资者的收益如何保障？</h3>#}
+{#<h3 class="yellwo" 20px="" 0px="" 0px;="" rgb(244,="" 137,="" 67);="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" 16px;="" normal;?=""><p style="font-size:12px;font-weight:normal;line-height:18px;" 0px;="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" rgb(135,="" 135,="" 135);="" 14px;="" 0px;?=""><span style="font-size:14px;">作为信息中介平台，主要职能是交易撮合，即使平台不存在，投资者的收益也还是有足够保障的。</span></p>#}
+{#<p style="font-size:12px;font-weight:normal;line-height:18px;" 0px;="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" rgb(135,="" 135,="" 135);="" 14px;="" 0px;?=""><span style="font-size:14px;">首先投融双方的债权债务关系不会消失；</span></p>#}
+{#<p style="font-size:12px;font-weight:normal;line-height:18px;" 0px;="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" rgb(135,="" 135,="" 135);="" 14px;="" 0px;?=""><span style="font-size:14px;">其次担保公司会负责投资人的全额本息担保；</span></p>#}
+{#<p style="font-size:12px;font-weight:normal;line-height:18px;" 0px;="" ?microsoft="" yahei?,="" ?helvetica="" neue?,="" helvetica,="" arial,="" sans-serif;="" rgb(135,="" 135,="" 135);="" 14px;="" 0px;?=""><span style="font-size:14px;">最后独立于平台外的第三方支付平台有通路保证还本付息的资金会在项目到期日划转到投资人之前在平台上绑定的收款银行卡中。</span></p>#}
+{#</h3>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+    <section>
+        <div class="main clearfix">
+            <div class="box_title"><i class="ico_jiedai"></i>融资方信息</div>
+            <div class="con_width">
+                <h2><i class="ico_jiben"></i>基本信息</h2>
+                <div class="border_b pb10">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tab_jiben tab_jiben1">
+                        <colgroup>
+                        <col width="108">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>简介：</th>
+                                <td style="text-align: center;">
+                                    {{ trade_details.content | safe  }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2><i class="ico_shenhe"></i>审核记录</h2>
+                <div class="">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tab_jiben">
+                        <colgroup>
+                        <col width="470">
+                        <col width="410">
+                        <col width="144">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <td class="pl30">审核项目</td>
+                                <td class="">状态</td>
+                                <td class="">通过时间</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="pl30">身份证认证</td>
+                                <td class="">
+                                    <div class="yanzheng"><i></i>已验证</div>
+                                </td>
+                                <td class="">2015-06-07</td>
+                            </tr>
+                            <tr>
+                                <td class="pl30">机构担保</td>
+                                <td class=""><div class="yanzheng"><i></i>已验证</div></td>
+                                <td class=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="shadow clearfix pb20">
+            <div class="box_title"><i class="ico_huankuan"></i>投资记录</div>
+            <div class="con_width">
+                <table class="con_hk f14" width="100%">
+                    <colgroup>
+                    <col width="314">
+                    <col width="344">
+                    <col width="222">
+                    <col width="180">
+                    </colgroup>
+                    <thead class="">
+                        <tr class="text1">
+                            <td>
+                                <h4><span>目前投资总额（元）</span></h4>
+                                <span class="color-yellow1 f20">{{ invest_am }}</span>
+                            </td>
+                            <td>
+                                <h4>剩余投资总额（元）</h4>
+                                <span class="color-yellow1 f20">{{ surplus }}</span>
+                            </td>
+                            <td>
+                                <h4>剩余投资时间</h4>
+                                <span class="color-black f20">{{ time_finsh }}</span>
+                            </td>
+                            <td valign="middle">
+                                <a href="javascript:void(0)" class="but-gray but-yellow pt5 pb5 w65 j_scroll">投资</a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text1">
+                            <td class="border_b"><span>投资人</span></td>
+                            <td class="border_b">投资金额（元）</td>
+                            <td class="border_b">投资时间</td>
+                            <td class="border_b"></td>
+                        </tr>
+                        {% for invest in invest_list %}
+                        <tr class="f16">
+                            <td><span>{{ invest.user }}</span></td>
+                            <td><span class="color-yellow1">{{ invest.price }}</span></td>
+                            <td>{{ invest.date_publish | date:'Y-m-d H:i:s' }}</td>
+                            <td></td>
+                        </tr>
+                        {% endfor %}
+{#                        <tr class="trbg f16">#}
+{#                            <td><span>li***28（李先生）</span></td>#}
+{#                            <td><span class="color-yellow1">500.00</span></td>#}
+{#                            <td>2015-11-18 21:24</td>#}
+{#                            <td></td>#}
+{#                        </tr>#}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    </div>
+</div>
+{% endblock %}

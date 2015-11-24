@@ -1,0 +1,57 @@
+.form {
+	width: 100%;
+	max-width:500px;
+	height: 275px;
+	padding-top: 25px;
+}
+.login-content {
+	height: 300px;
+	width: 100%;
+	max-width:500px;
+	background-color: rgba(174, 198, 2550, .6);
+	float: left;
+	border-radius: 6px;
+}
+
+
+.input-group {
+	margin: 0px 0px 30px 0px !important;
+}
+.form-control,
+.input-group {
+	height: 40px;
+}
+
+.form-group {
+	margin-bottom: 0px !important;
+}
+.login-title {
+	padding: 20px 10px;
+	background-color: rgba(0, 0, 0, .6);
+}
+.login-title h1 {
+	margin-top: 10px !important;
+}
+.login-title small {
+	color: #fff;
+}
+
+.link p {
+	line-height: 20px;
+	margin-top: 30px;
+}
+.btn-sm {
+	padding: 8px 24px !important;
+	font-size: 16px !important;
+}
+
+.form-left input[type=text],.form-left input[type=url],.form-left input[type=email],.form-left input[type=password] {
+	float:left;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width:98%;
+	padding: 0.7em 2em 0.7em 1em;
+	/*border:none;*/
+	color: #000;
+	font-size:15px;
+	outline: none;
+}

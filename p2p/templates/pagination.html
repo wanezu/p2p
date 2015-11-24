@@ -1,0 +1,40 @@
+<div id="paginatio" class="paginatio">
+    <ul>
+        {% if trade_arr.has_previous %}
+        <li>
+            <a href="?page=1" class="page-link prev" title="上一页">首页</a>
+        </li>
+        <li>
+            <a href="?page={{ trade_arr.previous_page_number }}" class="page-link prev" title="上一页">上一页</a>
+        </li>
+        {% else %}
+        <li>
+            <span class="current prev" title="首页">首页</span>
+        </li>
+        <li>
+            <span class="current prev" title="上一页">上一页</span>
+        </li>
+        {% endif %}
+        <li class="active">
+            <span class="current">{{ trade_arr.number }}</span>
+        </li>
+        {% if trade_arr.has_next %}
+        <li>
+            <a href="?page={{ trade_arr.next_page_number }}" class="page-link next" title="下一页">下一页</a>
+        </li>
+        <li>
+            <a href="?page={{ trade_arr.paginator.num_pages }}" class="page-link next" title="尾页">尾页</a>
+        </li>
+        {% else %}
+        <li>
+            <span class="current prev" title="下一页">下一页</span>
+        </li>
+        <li>
+            <span class="current prev" title="尾页">尾页</span>
+        </li>
+        {% endif %}
+        <li>
+            <span class="current prev" title="共{{ trade_arr.paginator.num_pages }}页">共{{ trade_arr.paginator.num_pages }}页</span>
+        </li>
+    </ul>
+</div>
