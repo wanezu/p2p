@@ -111,19 +111,25 @@
                                 {% endif %}
                             </li>
                             <li>
-                                {% if user_list.email %}
-                                    <i class="yes"></i><span class="status">已设置</span><span>{{ user_list.email }}</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>
-                                {% else %}
-                                    <i class="no"></i><span class="status">未设置</span><a href="http://www.firstp2p.com/account/addemail" class="blue">设置</a>
-                                {% endif %}
                                 <label>收货地址：</label><span class="sec-info gray">用于邮寄活动奖品或礼品</span>
-                                <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% if user_list.address_in %}
+                                    <i class="yes"></i><span class="status">已设置</span><span>{{ user_list.address_in }}</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% endif %}
                             </li>
+{#                            <li>#}
+{#                                <label>密保问题：</label><span class="sec-info gray">用于进行找回密码等关键操作，保证您账号安全</span>#}
+{#                                <i class="no"></i><span class="status">未设置</span>  <a href="javascript:void(0)" class="blue" id="pw_submit_button" data-type="0">设置</a>#}
+{#                            </li>#}
                             <li>
-                            <label>密保问题：</label><span class="sec-info gray">用于进行找回密码等关键操作，保证您账号安全</span>
-                                                           <i class="no"></i><span class="status">未设置</span>  <a href="javascript:void(0)" class="blue" id="pw_submit_button" data-type="0">设置</a>
-                                                         </li>
-                            <li><label>我的邀请人：</label><span class="gray" style="width:362px">您的邀请人的邀请码</span>FK2FSP                            </li>
+                                <label>我的邀请人：</label><span class="gray" style="width:362px">您的邀请人的邀请码</span>
+                                {% if user_list.inviter %}
+                                    {{ user_list.inviter }}
+                                {% else %}
+                                    无
+                                {% endif %}
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -31,7 +31,8 @@ class User(models.Model):
     address_in = models.CharField("住址",max_length=100,default='')
     is_ban = models.CharField("是否禁止",max_length=2, choices=(('1', '是'), ('0', '否'), ),default=0)
     bank_number = models.CharField("银行卡号",max_length=100,default='')
-
+    inviter = models.CharField("我的邀请人",max_length=100,default='')
+    invit_code = models.CharField("我的邀请码",max_length=100,default='')
 
     class Meta:
         verbose_name = '用户'
