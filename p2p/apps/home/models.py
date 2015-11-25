@@ -30,6 +30,7 @@ class User(models.Model):
     region = models.IntegerField("地区",default=0)
     address_in = models.CharField("住址",max_length=100,default='')
     is_ban = models.CharField("是否禁止",max_length=2, choices=(('1', '是'), ('0', '否'), ),default=0)
+    bank_number = models.CharField("银行卡号",max_length=100,default='')
 
 
     class Meta:

@@ -26,7 +26,7 @@ def install(request):
         login = 1
     else:
         login = 0
-
+    user_list = User.objects.get(username__exact=username)
     return render_to_response('user/install.html',locals())
 
 #投资记录

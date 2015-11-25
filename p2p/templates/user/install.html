@@ -12,7 +12,7 @@
 <ul>
    	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
     <li class="user_select"><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
-    <li><a href="/index/load/"><!----><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
     <li><a href="http://www.firstp2p.com/account/charge"><i class="ico_chongzhi"></i>充值</a></li>
     <li><a href="http://www.firstp2p.com/account/carry"><i class="ico_tixian"></i>提现</a></li>
     <li><a href="http://www.firstp2p.com/account/money"><i class="ico_jilu"></i>资金记录</a></li>
@@ -52,7 +52,7 @@
                         <div class="h-line"></div>
                         <ul class="sub-nav clearfix">
                             <li class="select">
-                                <a href="./网信理财1_files/网信理财1.html">账户设置</a>
+                                <a href="/index/install/">账户设置</a>
                             </li>
                             <li>
                                 <a href="http://www.firstp2p.com/account/setmessage">消息设置</a>
@@ -63,29 +63,62 @@
                     <div class="r-cont">
                         <ul class="security-list">
                             <li>
-                                <label>用户名：</label><span class="sec-info gray">您的网信理财账号，可用于登录</span><i class="yes"></i><span class="status">已设置</span><span>m13245135215</span></li>
+                                <label>用户名：</label><span class="sec-info gray">您的网信理财账号，可用于登录</span>
+                                {% if user_list.username %}
+                                    <i class="yes"></i><span class="status">已设置</span><span>{{ user_list.username }}</span>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% endif %} </li>
                             <li>
-                                <label>登录密码：</label><span class="sec-info gray">为了您的账户安全，建议定期更换</span><i class="yes"></i><span class="status">已设置</span><span>******</span>  <a href="http://www.firstp2p.com/user/editpwd" class="blue">修改</a></li>
+                                <label>登录密码：</label><span class="sec-info gray">为了您的账户安全，建议定期更换</span>
+                                {% if user_list.password %}
+                                    <i class="yes"></i><span class="status">已设置</span><span>******</span><a href="http://www.firstp2p.com/user/editpwd" class="blue">修改</a></li>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% endif %} </li>
                             <li>
-                                <label>手机号码：</label><span class="sec-info gray">用于接收验证码及账户通知，是您重要的身份凭证</span> <i class="yes"></i><span class="status">已认证</span><span class="mobile_num"> 132****5215</span> <a href="http://www.firstp2p.com/user/editmb" class="blue">修改</a></li>
+                                <label>手机号码：</label><span class="sec-info gray">用于接收验证码及账户通知，是您重要的身份凭证</span>
+                                {% if user_list.user_phone %}
+                                    <i class="yes"></i><span class="status">已认证</span><span class="mobile_num">{{ user_list.user_phone }}</span> <a href="http://www.firstp2p.com/user/editmb" class="blue">修改</a>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% endif %} </li>
                             <li>
                                 <label>证件信息：</label><span class="sec-info gray">身份认证是充值、投资及提现的必要条件</span>
-                                                                <i class="yes"></i><span class="status">已认证</span><span> 武永号（34**************12） </span>
-                                                        </li><li>
+                                {% if user_list.real_name %}
+                                    <i class="yes"></i><span class="status">已认证</span><span> {{ user_list.real_name }}（{{ user_list.card }}） </span>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% endif %}
+                            </li>
+                            <li>
                                 <label>银行卡号：</label><span class="sec-info gray">为保障资金安全，余额仅可提现至绑定银行卡中</span>
-                                                        <i class="yes"></i><span class="status">已设置</span><span>中国建设银行 6217***********8161</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>                                                    </li>
-                        
-                                                                                                                                    <li>
+                                {% if user_list.real_name %}
+                                    <i class="yes"></i><span class="status">已设置</span><span>中国建设银行 6217***********8161</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                                {% endif %}
+                                                                                                            </li>
+                            <li>
                                 <label>支付密码：</label> <span class="sec-info gray">用于在客户端开通快捷支付后的付款确认</span> <i class="yes"></i><span class="status">已设置</span><span>******</span><a href="http://www.firstp2p.com/payment/editpassword" target="blank" class="blue">修改</a>
                             </li>
-                                                        <li>
-                                <label>电子邮箱：</label><span class="sec-info gray">用于接收月账单及账户通知，非必需设置</span>
-                                                                <i class="no"></i><span class="status">未设置</span><a href="http://www.firstp2p.com/account/addemail" class="blue">设置</a>
-                                                            </li>
                             <li>
+                                <label>电子邮箱：</label><span class="sec-info gray">用于接收月账单及账户通知，非必需设置</span>
+                                {% if user_list.email %}
+                                    <i class="yes"></i><span class="status">已设置</span><span>{{ user_list.email }}</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="http://www.firstp2p.com/account/addemail" class="blue">设置</a>
+                                {% endif %}
+                            </li>
+                            <li>
+                                {% if user_list.email %}
+                                    <i class="yes"></i><span class="status">已设置</span><span>{{ user_list.email }}</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>
+                                {% else %}
+                                    <i class="no"></i><span class="status">未设置</span><a href="http://www.firstp2p.com/account/addemail" class="blue">设置</a>
+                                {% endif %}
                                 <label>收货地址：</label><span class="sec-info gray">用于邮寄活动奖品或礼品</span>
-                                                                <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
-                                                            </li>
+                                <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
+                            </li>
                             <li>
                             <label>密保问题：</label><span class="sec-info gray">用于进行找回密码等关键操作，保证您账号安全</span>
                                                            <i class="no"></i><span class="status">未设置</span>  <a href="javascript:void(0)" class="blue" id="pw_submit_button" data-type="0">设置</a>
