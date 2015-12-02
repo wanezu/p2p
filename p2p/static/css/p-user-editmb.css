@@ -1,0 +1,41 @@
+/*修改安全手机*/
+.p_user_editmb .emb-mid { padding: 40px 0; min-height: 624px; height: auto !important; height: 624px; }
+.p_user_editmb .first-tep, .p_user_editmb .second-tep, .p_user_editmb .third-tep { width: 941px; height: 61px; margin: 0 auto; background-image: url(../images/mobile_edit.png); background-repeat: no-repeat; }
+.p_user_editmb .first-tep { background-position: 0 0 }
+.p_user_editmb .second-tep { background-position: 0 -74px }
+.p_user_editmb .third-tep { background-position: 0 -149px }
+.p_user_editmb .btn-sub { border: none; background-color: transparent; background: url(../images/sub_reg.png) no-repeat 0 0; width: 290px; height: 46px; line-height: 46px; text-align: center; color: #FFF; font-size: 18px; }
+.p_user_editmb .btn-sub:hover { background-position: -311px 0; }
+.p_user_editmb .btn-sub:active { background-position: -622px 0; }
+.p_user_editmb .mb { height: 36px; line-height: 36px; }
+.p_user_editmb .btn-send-blue, .p_user_editmb .btn-send-gray { display: inline-block; width: 120px; text-align: center; height: 34px; line-height: 34px; font-size: 14px; background-image: url(../images/phone-send.png); background-repeat: no-repeat; border: none; color: #FFF; background-color: transparent; }
+.p_user_editmb .btn-send-blue { background-position: 0 0; }
+.p_user_editmb .btn-send-blue:hover{background-position: -173px 0; }
+.p_user_editmb .btn-send-blue:active{background-position: 0 -45px; }
+.p_user_editmb .btn-send-gray,.p_user_editmb .btn-send-gray:hover,.p_user_editmb .btn-send-gray:active{ background-position: 0 -93px; }
+.p_user_editmb .w131 { width: 131px; }
+.p_user_editmb .w151 { width: 151px; }
+.p_user_editmb .ui-form { margin-top: 118px; }
+.p_user_editmb .edts-footer { text-align: center; padding-top: 15px; color: #ababab; border-top: 1px #e1e1e1 solid; width: 660px; margin: 200px auto 0 }
+.p_user_editmb .w224 { width: 224px; }
+.p_user_editmb .ipt-wrap { float: left; background: #FFFFFF; border: 1px solid #bababa; color: #4f4e4e; height: 34px; line-height: 34px; font-size: 14px; }
+.p_user_editmb .ipt-focus { border-color: #32a0fe; box-shadow: 1px 0px 2px rgba(183, 221, 253, 1), -1px 0px 2px rgba(183, 221, 253, 1), 0px 1px 2px rgba(183, 221, 253, 1), 0px -1px 2px rgba(183, 221, 253, 1); }
+.p_user_editmb .ipt-focus .areacode { color: #333 }
+.p_user_editmb .areacode { padding-left: 10px; float: left; color: #999; }
+.p_user_editmb input.txt-tel { font-size: 14px; margin-left: 13px; float: left; display: block; border: none; color: #4f4e4e; float: left; height: 34px; line-height: 34px; width: 165px; }
+.p_user_editmb input.txt-tel[type="password"]:focus, input.txt-tel[type="text"]:focus { border-color: transparent; box-shadow: none }
+.p_user_editmb .edit-step3 { width: 700px; margin: 0 auto; color: #656565; }
+.p_user_editmb .edit-success { margin: 0 30px 30px; text-align: center; margin-left: 10px; }
+.p_user_editmb .tzhuan { text-align: center; font-size: 14px; line-height: 32px; display: block; margin: 15px 0 0; padding-left: 5px; }
+.p_user_editmb .edit-suc { width: 43px; height: 43px; margin-right: 10px; display: inline-block; font-size: 0; vertical-align: -15px; line-height: 0; background: url(../images/edit_result.png) 0 -49px; }
+.p_user_editmb .font20 { font-size: 20px; }
+.p_user_editmb .edit-step3-txt { margin-top: 120px; }
+.p_user_editmb .edit-step3-txt ul { margin: 10px 0 30px 160px; }
+.p_user_editmb .edit-step3-txt ul li { text-align: left; font-size: 14px; line-height: 28px; }
+.p_user_editmb .edit-step3-txt ul li i { background: url(../images/dian.png) no-repeat; height: 6px; width: 5px; display: inline-block; vertical-align: middle; margin-right: 5px; }
+.p_user_editmb .img-Veri { width: 94px; height: 34px; border: 1px solid #bababa; margin-left: 13px; float: left; }
+.p_user_editmb .img-Veri img { width: 100%; height: 100%; cursor: pointer; }
+.p_user_editmb .refresh { margin-left: 15px; color: #0088cc; cursor: pointer; line-height: 36px; float: left; }
+.p_user_editmb .msg-box .n-ok{display: none;}
+.p_user_editmb #mobile  {box-shadow:none !important;border-color:transparent !important;}
+.p_user_editmb .ui-form li .mb label {width: auto;}

@@ -41,3 +41,39 @@ class User(models.Model):
 
     def __str__(self):
         return self.username
+
+
+# region城市数据表
+
+class Region(models.Model):
+    parent_id = models.IntegerField("父id",default=0)
+    region_name = models.CharField("名称",max_length=50,default='')
+    region_type = models.IntegerField("地区类型",default=0)
+    agency_id = models.IntegerField("代理",default=0)
+
+    class Meta:
+        verbose_name = '城市列表'
+        verbose_name_plural = verbose_name
+        ordering = ['id']
+
+    def __str__(self):
+        return self.region_name
+
+#红包数据表
+class Redpaper(models.Model):
+    red_name = models.CharField(max_length=200,default='',verbose_name='红包名称')
+    get_time = models.DateTimeField(auto_now_add=True,verbose_name='红包发放时间')
+    con_time = models.DateTimeField(default='',verbose_name='红包消费时间')
+    deadline = models.DateTimeField(default='',verbose_name='红包过期时间')
+    user = models.ForeignKey(User,verbose_name='红包所属人')
+    price = models.DecimalField(max_digits=9,decimal_places=2,blank=True,default=0.00,verbose_name='红包金额')
+    status = models.CharField(max_length=2, choices=(('1', '已提现'), ('2', '已失效'),('3','未使用')),default=3,verbose_name='红包状态')
+    remarks = models.TextField(verbose_name='备注信息')
+
+    class Meta:
+        verbose_name = '红包数据'
+        verbose_name_plural = verbose_name
+        ordering = ['id']
+
+    def __str__(self):
+        return self.red_name

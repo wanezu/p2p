@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index_v2.all.min.css' %}">
+<script type="text/javascript" src="{% static 'js/common_v2.all.min.js' %}"></script>
+<div class="p_user_editmb">
+    <link href="{% static 'css/p-user-editmb.css' %}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{% static 'js/editmb.js' %}"></script>
+    <span class="blank23"></span>
+    <div class="wrap clearfix">
+        <div class="ui-box">
+            <div class="h-title">
+                <h2>
+            <i></i>修改安全手机
+        </h2>
+            </div>
+            <div class="emb-mid">
+                <div class="first-tep"></div>
+                <div class="ui-form">
+                    <form action="/index/editmb/" id="password-form" method="post" class="nice-validator n-default" novalidate="novalidate">
+                        {% csrf_token %}
+                        <div class="mb25 tc">
+                            您正在更换网信理财账号<span class="text-color">{{ username }}</span>的安全手机，为了您的账号安全，请验证原有的安全手机号
+                        </div>
+                        <ul>
+                            <li class="clearfix">
+                                <label>原手机号</label>
+                                <div class="mb fl" id="input-mobile">
+                                    <label id="labels-mobile">{{ user_phone }}</label>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <label> 验证码</label>
+                                <div class="fl">
+                                    {{ phone.code }}
+                                    <input type="button" class="ml15 btn-send-blue" id="bt" value="免费获取验证码">
+                                </div>
+                                <span class="msg-box n-right" for="validNum" id="code-err"></span>
+                            </li>
+                        </ul>
+                        <div class="btn-w30">
+                            <input class="btn-sub" type="submit" id="step-one" value="下一步">
+                        </div>
+                    </form>
+                    <div class="edts-footer">
+                        无法接收短信，请拨打客服热线&nbsp;400-890-9888
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <span class="blank23"></span>
+</div>
+{% endblock %}

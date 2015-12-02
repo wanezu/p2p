@@ -14,12 +14,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Article',
             fields=[
-                ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('title', models.CharField(verbose_name='文章标题', max_length=50)),
                 ('desc', models.CharField(verbose_name='文章描述', max_length=100)),
                 ('source', models.CharField(verbose_name='文章来源', max_length=50)),
                 ('content', models.TextField(verbose_name='文章内容')),
-                ('is_recommend', models.BooleanField(verbose_name='是否推荐', default=False)),
+                ('is_recommend', models.BooleanField(default=False, verbose_name='是否推荐')),
                 ('date_publish', models.DateTimeField(verbose_name='发布时间', auto_now_add=True)),
             ],
             options={
@@ -31,9 +31,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(verbose_name='分类名称', max_length=30)),
-                ('index', models.IntegerField(verbose_name='分类的排序', default=999)),
+                ('index', models.IntegerField(default=999, verbose_name='分类的排序')),
             ],
             options={
                 'verbose_name': '文章分类',
@@ -44,9 +44,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Classify',
             fields=[
-                ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(verbose_name='标的种类', max_length=30)),
-                ('index', models.IntegerField(verbose_name='分类排序', default=999)),
+                ('index', models.IntegerField(default=999, verbose_name='分类排序')),
             ],
             options={
                 'verbose_name': '标的种类',
@@ -57,10 +57,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Invest',
             fields=[
-                ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
-                ('price', models.DecimalField(blank=True, verbose_name='投资金额', decimal_places=2, default=0.0, max_digits=9)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('price', models.DecimalField(default=0.0, verbose_name='投资金额', decimal_places=2, blank=True, max_digits=9)),
                 ('date_publish', models.DateTimeField(verbose_name='投资时间', auto_now_add=True)),
-                ('status', models.CharField(max_length=2, verbose_name='投资状态', choices=[('1', '成功'), ('0', '失败')], default=1)),
+                ('status', models.CharField(default=1, verbose_name='投资状态', max_length=2, choices=[('1', '成功'), ('0', '失败')])),
             ],
             options={
                 'verbose_name': '投资记录',
@@ -71,17 +71,18 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Trade',
             fields=[
-                ('id', models.AutoField(auto_created=True, verbose_name='ID', primary_key=True, serialize=False)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('title', models.CharField(verbose_name='借款标题', max_length=100)),
                 ('desc', models.CharField(verbose_name='借款基本描述', max_length=100)),
                 ('content', models.TextField(verbose_name='借款详细内容')),
                 ('date_publish', models.DateTimeField(verbose_name='发布时间', auto_now_add=True)),
                 ('term', models.CharField(verbose_name='投资期限', max_length=50)),
-                ('price', models.DecimalField(blank=True, verbose_name='总额', decimal_places=2, default=0.0, max_digits=9)),
+                ('repayment', models.CharField(default=0, verbose_name='还款期限', max_length=50)),
+                ('price', models.DecimalField(default=0.0, verbose_name='总额', decimal_places=2, blank=True, max_digits=9)),
                 ('incomemode', models.CharField(verbose_name='收益方式', max_length=50)),
-                ('status', models.BooleanField(verbose_name='审核状态', default=False)),
+                ('status', models.BooleanField(default=False, verbose_name='审核状态')),
                 ('created_at', models.DateTimeField(verbose_name='创建时间', auto_now_add=True)),
-                ('classify', models.ForeignKey(blank=True, to='index.Classify', null=True, verbose_name='标的种类')),
+                ('classify', models.ForeignKey(null=True, to='index.Classify', verbose_name='标的种类', blank=True)),
                 ('user', models.ForeignKey(verbose_name='发标用户', to='home.User')),
             ],
             options={
@@ -103,6 +104,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='article',
             name='category',
-            field=models.ForeignKey(blank=True, to='index.Category', null=True, verbose_name='分类'),
+            field=models.ForeignKey(null=True, to='index.Category', verbose_name='分类', blank=True),
         ),
     ]

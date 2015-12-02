@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap">
+<link href="{% static 'css/password.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/password_skin.css' %}" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{% static 'js/pas_strength.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/password.js' %}"></script>
+<link href="{% static 'css/user_pwdrule.css' %}" type="text/css" rel="stylesheet">
+<div class="w980 mauto clearfix">
+	<section>
+		<div class="shadow">
+			<div class="mess_title tc">修改密码</div>
+			<div class="pw-info">
+				<form method="post" action="/index/changepw/" id="modify">
+                    <ul class="clearfix">
+                        {% csrf_token %}
+						<li>
+							<label> <span>*</span> 旧密码： </label>
+							{{ changepwd.old_password }}
+							&nbsp;&nbsp;&nbsp;<font class="error_tip old_password_tip" style="color: #CC1223"></font></li>
+						<li>
+							<label> <span>*</span> 新密码： </label>
+							{{ changepwd.new_password }}
+							&nbsp;&nbsp;&nbsp;<font class="error_tip new_password_tip" style="color: #CC1223"></font>
+                            <span class="color-gray2">密码安全程度：<span class="color-low">低</span></span>
+                            <div id="" class="pass-item-tip-password">
+                                <div class="pwd-checklist-wrapper"><span class="pwd-checklist-arrow"><em class="arrowa">◆</em><em class="arrowb">◆</em></span>
+                                    <ul id="pwd-checklist" class="pwd-checklist">
+                                        <li class="safety-level"> <span class="pr9">安全程度：</span><span class="process low"></span><span class="process"></span><span class="process"></span><span class="ml4 color-low">低</span>
+                                        </li>
+                                        <li id="" data-rule="len" class="pwd-checklist-item pwd-checklist-item-error">6-20位</li>
+                                        <li id="" data-rule="cha" class="pwd-checklist-item pwd-checklist-item-success">支持数字、大小写字母、标点符号</li>
+                                        <li id="" data-rule="spa" class="pwd-checklist-item pwd-checklist-item-error">不允许有空格</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                            <!-- 新密码验证成功后 -->
+                            <!--<li style="margin-top:100px">
+							<label> <span>*</span> 新密码： </label>
+							<input type="password" value="" name="new_password"
+                            id="new_password" class="txt" autocomplete="off">
+							&nbsp;&nbsp;&nbsp;<font
+                            class="error_tip new_password_tip" style="color: #CC1223"></font>
+                            <span class="color-gray2">密码安全程度：<span class="color-low">低</span></span>
+                            <span class="color-gray2">密码安全程度：<span class="color-mid">中</span></span>
+                            <span class="color-gray2">密码安全程度：<span class="color-high">高</span></span>
+                            </li>-->
+
+
+						<li>
+							<label> <span>*</span> 确认密码： </label>
+							{{ changepwd.re_new_password }}
+							&nbsp;&nbsp;&nbsp;<font class="error_tip re_new_password_tip" style="color: #CC1223"></font></li>
+                        <input type="hidden" name="source_url" value="{{ request.META.HTTP_REFERER }}">
+						<li class="btn-w30">
+							<label> <span></span> </label>
+							<input type="submit" class="sumbtn" value="确定">
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+</div>
+{% endblock %}

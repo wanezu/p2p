@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap" style="height: 600px;">
+<div class="user_nav f_l mr5">
+<style>
+.user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
+.user_nav h2{font-size:18px; padding:10px 19px;}
+.user_nav li{line-height:38px; padding:0px 6px; position: relative;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:153px !important;}
+.user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+</style>
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li class="user_select"><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+    <li><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
+</ul>
+</div>
+<div class="user_right f_l">
+<link rel="stylesheet" type="text/css" href="{% static 'css/user_web2.css' %}">
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+<script type="text/javascript">
+(function() {
+_fmOpt = {
+    partner: 'firstp2p',
+    appName: 'firstp2p_web',
+    token: '1rdo8f31egqiv280to6hdqs4l5'        };
+var cimg = new Image(1,1);
+    cimg.onload = function() {
+    _fmOpt.imgLoaded = true;
+};
+cimg.src = "https://fp.fraudmetrix.cn/fp/clear.png?partnerCode=firstp2p&appName=firstp2p_web&tokenId=" + _fmOpt.token;
+var fm = document.createElement('script'); fm.type = 'text/javascript'; fm.async = true;
+fm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'static.fraudmetrix.cn/fm.js?ver=0.1&t=' + (new Date().getTime()/3600000).toFixed(0);
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fm, s);
+ })();
+</script>
+
+
+<!--private js&css end-->
+
+<form name="chargeForm" id="chargeForm" action="http://www.firstp2p.com/account/docharge" method="post">
+    <div class="user_right">
+        <div class="user_right_box" id="chargeSelect">
+            <div class="user_title"><h1><i class="ico_chongzhi"></i>充值</h1></div>
+             <div class="bank-tip">充值过程中可能会出现5-30分钟到账情况，请耐心等待。</div>
+            <input type="hidden" id="token_id" name="token_id" value="1448698692450"><input type="hidden" id="token" name="token" value="f2b791d47e20798efa635f1ad6eb19c3">            <input type="hidden" name="payment" value="4">
+
+
+            <div class="take">
+                <div>
+                    <dl class="clearfix">
+                        <dt>充值账户：</dt>
+                        <dd>武永号</dd>
+                    </dl>
+                    <dl class="clearfix pb7">
+                        <dt>账户余额：</dt>
+                        <dd><span class="color-yellow2">0.00</span>&nbsp;元</dd>
+                    </dl>
+                    <dl class="clearfix">
+                        <dt class="pt3">充值金额：</dt>
+                        <dd><input type="text" class="user_name validate[required,funcCall[X.V.checkCrash]]" id="charge" name="money" data-int="10" data-xiaoshu="2"> 元</dd>
+                        <dd class="chargeformError"></dd>
+                    </dl>
+                </div>
+
+            </div>
+            <div class="f14 charge_btn">
+                <button class="user_button mt10 mb20" id="incharge_done" type="submit">充值</button>
+            </div>
+
+            <div class="user_tip charge_tip">
+                <p>1、所有投资保证金将由第三方平台托管。</p>
+
+                <p>2、请注意您的银行卡的充值限制，以免造成不便。</p>
+
+                <p>3、如果充值金额没有及时到账，可通过拨打客服热线<span class="color-yellow1"> 400-890-9888 </span> （工作时间7:00-23:00）寻求帮助。</p>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap">
+<div class="blank"></div>
+<div class="user_nav f_l mr5">
+<style>
+.user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
+.user_nav h2{font-size:18px; padding:10px 19px;}
+.user_nav li{line-height:38px; padding:0px 6px; position: relative;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:153px !important;}
+.user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+</style>
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li class="user_select"><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+    <li><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
+</ul>
+<!--个人中心左侧开始-->
+</div>
+<div class="user_right f_l">
+<link rel="stylesheet" type="text/css" href="{% static 'css/user_web2.css' %}">
+<div class="user_right">
+    <div class="user_right_box">
+        <div class="user_title">
+            <h1 class="fl"><i class="ico_huankuan"></i>还款计划</h1>
+            <div class="fg_line"></div>
+            <ul class="huank_nav fl">
+                <li class="select"><a href="./还款计划_files/还款计划.html">还 款</a></li>
+                <li><a href="http://www.firstp2p.com/account/refund?status=1">已还清</a></li>
+            </ul>
+        </div>
+                <div class="empty-box">没有记录</div>
+            </div>
+</div>
+</div>
+<div class="blank"></div>
+</div>
+{% endblock %}

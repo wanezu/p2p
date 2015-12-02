@@ -221,3 +221,14 @@
 2015-11-23 16:35:15,069 [Thread-4:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
 2015-11-23 16:35:15,533 [Thread-5:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
 2015-11-23 16:35:15,749 [Thread-6:140314652489472] [blog.views:118] [views:login] [ERROR]- 'dict' object has no attribute 'has_key'
+2015-11-27 13:14:17,000 [Thread-162:139863747696384] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-28 07:22:28,668 [Thread-34:140552452429568] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-28 07:22:30,629 [Thread-36:140552452429568] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-28 12:03:24,252 [Thread-176:139805614667520] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-28 12:03:25,844 [Thread-177:139805606274816] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-28 12:03:26,699 [Thread-178:139805597882112] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-28 15:09:26,102 [Thread-94:140303182743296] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-29 00:04:55,125 [Thread-15:140513814509312] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-29 03:33:17,712 [Thread-5:140194233706240] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-29 03:33:32,889 [Thread-8:140194233706240] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.
+2015-11-30 15:37:16,047 [Thread-19:140494554265344] [blog.views:115] [views:login] [ERROR]- User matching query does not exist.

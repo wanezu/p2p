@@ -3,7 +3,7 @@
 {% block left_content %}
 	<!-- header-section-ends -->
 <div class="wrap">
-<meta http-equiv="refresh" content="3;URL=/home/login/">
+<meta http-equiv="refresh" content="3;URL={{ response }}">
 <!--private js&css start-->
 <link href="{% static 'css/index_v2.all.min.css' %}" rel="stylesheet" type="text/css" media="all" />
 <script src="{% static 'js/common_v2.all.min.js' %}"></script>
@@ -15,9 +15,9 @@
     <div class="edit-success"><i class="edit-fail"> </i>
         <span class="font24">{{ reason | safe }}</span>
     </div>
-    <span class="font16">请登录后查看。</span>
+    <span class="font16">请重新操作后查看。</span>
     <br>
-    <span class="font14">系统将在3秒后自动跳转，如果没有跳转，请点击 <a href="/home/login/">这里</a> 跳转</span>
+    <span class="font14">系统将在3秒后自动跳转，如果没有跳转，请点击 <a href="{{ response }}">这里</a> 跳转</span>
     <span class="blank80"></span>
 </div>
 <span class="blank80"></span>

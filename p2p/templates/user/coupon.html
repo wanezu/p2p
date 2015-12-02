@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap">
+<div class="blank"></div>
+<div class="user_nav f_l mr5">
+<style>
+.user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
+.user_nav h2{font-size:18px; padding:10px 19px;}
+.user_nav li{line-height:38px; padding:0px 6px; position: relative;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:153px !important;}
+.user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+</style>
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+    <li class="user_select"><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
+</ul>
+<!--个人中心左侧开始-->
+
+</div>
+<div class="user_right f_l">
+	<div class="p_account_coupon">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user_v2.css' %}">
+    <!-- 分享链接样式，后期合并 -->
+    <link rel="stylesheet" type="text/css" href="./邀请返利_files/user_share.css">
+    <!-- 查询 -->
+    <script src="./邀请返利_files/select.v1.js"></script>
+    <script src="./邀请返利_files/jquery_placeholder-1.0.js"></script>
+    <script src="./邀请返利_files/account_coupon.js"></script>
+    <div class="user_right_box mb10">
+                <div class="user_title">
+            <h1><span class="f14 pr15 fr"><a class="p_account_coupon_top_advLink" href="http://mp.weixin.qq.com/s?__biz=MjM5NzU5OTQ2Mw==&mid=209126244&idx=1&sn=66f74dd85c4e0dcc60ee6e6bef34fdcc&scene=0&key=dffc561732c226513b997e365357a7fdd42fca07c687152da3ff4e824d07890ba150ddd9f3a4d7d0aaa1c53f652daaa3&ascene=1&uin=MTkzOTU1MDQw&devicetype=webwx&version=70000001&pass_ticket=EOrXFZnCfq3MoxvOGwIQMG9AyrzWrqPM8dllgaTLQkQ%3D" target="_blank">邀请好友首次投资，最高奖励100元！&gt;&gt;</a></span><i class="ico_yaoqing"></i>邀请好友</h1></div>
+        <div class="user-cont">
+            <div class="myinvite">
+                                <div class="clearfix">
+                    <div class="f18 fl pr30"><i class="icon-yqm"></i>邀请码：<span class="red">FK4Q5B</span> </div>
+                    <div class="color-gray f14 fl">好友每次投资，您都将获得 <span class="red">0.10%（年利率）</span>邀请返利！ <a href="javascript:void(0)" class="blue tx-dec" id="js_flsm">返利说明</a></div>
+                </div>
+                            </div>
+            <div class="inv-way">
+                <div class="tit f16">邀请方式：分享邀请链接</div>
+                <div class="con">
+                    <p>将带有邀请码的注册链接发送给好友 ，好友完成注册且投资，您将获得返利。</p>
+                    <div class="inv-url">
+                        <span id="clipTar01">http://www.firstp2p.com/?cn=FK4Q5B</span>
+                        <a class="copy-link" href="javascript:void(0)" data-clipboard-target="clipTar01">复制链接</a>
+                    </div>
+                    <div class="jthis clearfix" id="jiaThisShareBox1" data-share-data="{&quot;url&quot;:&quot;http://www.firstp2p.com/?cn=FK4Q5B&quot;,&quot;summary&quot;:&quot;高额年化浓情甜蜜，福利味道飘香四溢，网信理财投资神器一出，收益Duang地一下就上去！让你一开始就无法拒绝。以“利”会友的时代，分享财富喜悦，傲娇的做个投资小达人吧！填我的邀请码FK4Q5B，还有额外返利赠与你哦！http://www.firstp2p.com?cn=FK4Q5B&quot;}">
+                        <div class="fl">分享到：</div>
+                        <div class="jiathis_style_32x32 clearfix fl">
+                            <a class="jiathis_button_weixin" title="分享到微信"><span class="jiathis_txt jtico jtico_weixin"></span></a>
+                            <a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                            <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                            <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                            <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
+                            <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inv-way" id="gameShareWrap" style="display: none;">
+                <div class="tit f16" id="gameShareTitle"></div>
+                <div class="con" id="way2-con">
+                    <p id="gameShareDes">
+
+                    </p>
+                    <script type="text/javascript">
+                        var gameAdJson = null;
+                        var showBonusLink = 0;//1的时候表示符合新手礼包邀请条件，0不符合，读取主域名
+                    </script>
+                    <ul class="game-list clearfix" id="game-list">
+                        <!--<li data-share-data='{
+                                "url":"http://www.firstp2p.com/hongbao/CashGet?cn=F00F3F",
+                                "title":"01金秋转盘送礼包，最高30元",
+                                "des":"01每位用户有3次抽奖机会，分享到朋友圈可再获3次抽奖机会，多次抽奖获得的红包金额可累加。",
+                                "wximgSrc":"//assets5.ncfstatic.com/201511272359/v1/images/user/qrcode.png",
+                                "summary":"这是第一个游戏的summary"
+                            }'>
+                            <img src="//assets5.ncfstatic.com/201511272359/v1/images/user/youxi_01.png" alt="" width="72" height="74">
+                            <span>金秋转盘送礼包，最高30元</span>
+                        </li>-->
+                    </ul>
+                    <div class="inv-moreBox"><a href="javascript:;" class="inv-more">展开更多</a></div>
+                </div>
+            </div>
+        </div>
+            </div>
+    <div class="user_right_box  mb10 pb20">
+        <div class="user_title">
+            <h1>
+        <i class="ico_yaoqing"></i>邀请记录<span class="f16 pl10">(<span>您已累计邀请&nbsp;0</span> 人，
+            获得返利 <em class="color-yellow1">0.00</em> 元，
+            待返金额 <em class="yanzheng">0.00</em> 元)</span></h1></div>
+        <!-- 查询 -->
+        <div class="invite_search">
+            <form id="ss_form" type="get" action="./邀请返利_files/邀请返利.html">
+                <div class="clearfix">
+                    <div class="ss_tit">返利类型</div>
+                    <div class="ui_select_box" data-name="type" id="" style="z-index:11"><input type="hidden" name="type" id="type" value="0">
+                        <div class="j_select" style="color: rgb(51, 51, 51); font-size: 14px;">全部</div>
+                        <ul class="select_ul none j_selectContent">
+                            <li data-value="0" data-select="true">全部</li>
+                            <li data-value="1">邀请注册</li>
+                            <li data-value="2">邀请投资</li>
+                        </ul>
+                    </div>
+                    <div class="ss_tit">查询</div>
+                    <input name="content" type="text" class="ipt_txt int_placeholder" id="" placeholder="手机号/姓名" data-placeholder="手机号/姓名" value="">
+                    <input type="submit" id="action_send_code" class="btn_red_h36" value="确认">
+                    <a href="javascript:void(0)" class="ss_clear" id="ss_clear" style="display:none;">清除条件</a>
+                </div>
+            </form>
+                        <div class="ss_error color-red" style="display:none">手机号/姓名格式不正确！</div>
+        </div>
+        <!-- //查询 -->
+        <table class="yqjilu">
+            <colgroup>
+                <col width="97">
+                    <col width="115">
+                        <col width="170">
+                            <col width="110">
+                                <col width="120">
+                                    <col width="165">
+            </colgroup>
+            <thead>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="tl">被邀请人</div>
+                    </td>
+                    <td>
+                        <div class="tl">邀请码</div>
+                    </td>
+                    <td>状态</td>
+                    <td>返利时间</td>
+                    <td>
+                        <div class="pr5">备注</div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                                <tr>
+                    <td colspan="5">暂无记录</td>
+                </tr>
+                            </tbody>
+        </table>
+        <div class="pages pr30"></div>
+        <p class="yq_tip pl30">北京东方联合投资管理有限公司保留对本活动的最终解释权。</p>
+    </div>
+</div>
+<!-- 游戏分享弹窗 -->
+<div class="gshare-list" style="display:none;">
+
+</div>
+<div class="con" id="gamePopCon" style="display: none;">
+    <p class="des"></p>
+    <div class="inv-url">
+        <!--<span class="link" id="clipTar02">{{popUrl}}</span>-->
+        <input class="inv-url-input" id="clipTar02" value="" style="ime-mode:disabled">
+        <a class="game_share" href="javascript:void(0)" data-clipboard-target="clipTar02">复制链接<div class="game-err" style="display:none;">邀请链接已复制到剪切板</div></a>
+    </div>
+
+    <div class="mt15 clearfix">
+        <div class="gm-share fl">
+            <img src="./邀请返利_files/{{popWxImg}}" alt="" width="105" height="105" class="img">
+            <span>扫一扫 分享到微信</span>
+        </div>
+        <div class="jthis fl">
+            <div style="line-height: 36px;">更多分享到：</div>
+            <div class="jiathis_style_32x32 clearfix fl">
+                <a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <script type="text/javascript" src="./邀请返利_files/jia.js" charset="utf-8"></script><script type="text/javascript" src="./邀请返利_files/plugin.client.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+<!-- 我的邀请码示例_2015 HTMl代码  -->
+<script type="text/template" id="js_flsm_tel">
+    <h2>示例:</h2>
+<table class="yqjilu border0" height="226" width="665">    <colgroup>        <col width="100" />        <col width="150" />        <col width="100" />        <col width="120" />        <col width="80" />    </colgroup>    <thead>    <tr>        <th>单笔投资金额</th>
+        <td>年化返利利率</td>
+        <td>投资期限</td>
+        <td>公式</td>
+        <td>返利</td>
+    </tr>
+    </thead>    <tbody>    <tr>        <th>100万元</th>
+        <td>0.1%</td>
+        <td>12个月</td>
+        <td>1000000*0.1%</td>
+        <td>1000元</td>
+    </tr>
+    <tr class="tr_bg">        <th>100万元</th>
+        <td>0.1%</td>
+        <td>9个月</td>
+        <td>1000000*0.1%/12*9</td>
+        <td>750元</td>
+    </tr>
+    <tr>        <th>100万元</th>
+        <td>0.1%</td>
+        <td>6个月</td>
+        <td>1000000*0.1%/12*6</td>
+        <td>500元</td>
+    </tr>
+    <tr class="tr_bg">        <th>100万元</th>
+        <td>0.1%</td>
+        <td>3个月</td>
+        <td>1000000*0.1%/12*3</td>
+        <td>            <p>250元</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</script>
+</div>
+
+<div class="blank"></div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap">
+<div class="blank"></div>
+<div class="user_nav f_l mr5">
+<style>
+.user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
+.user_nav h2{font-size:18px; padding:10px 19px;}
+.user_nav li{line-height:38px; padding:0px 6px; position: relative;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:153px !important;}
+.user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+</style>
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+    <li><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li class="user_select"><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
+</ul>
+<!--个人中心左侧开始-->
+</div>
+<div class="user_right f_l">
+        <!--private js&css start-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/user_v2.css' %}">
+        <!--private js&css end-->
+        <style>
+        .ui-content {padding:20px 0px;overflow: hidden;}
+        .ui-content .fl {border-left:1px solid #e3e3e3;padding-left:34px;margin-left:-1px;width:410px;}
+        .ui-content .fl h2{font-size:16px;color:#888;margin:5px 0 15px;padding:0 0 0px 0;}
+
+        .ui-content .content-up {width:370px;border-bottom:1px solid #e5e5e5;padding:0 0 8px 0;margin:0 43px 8px 0;}
+        .ui-content  span {width:120px;display: inline-block;}
+      	.ui-content .content-up span {color:#888;}
+    	.ui-content .content-down span {font-size: 14px;}
+        </style>
+            <div class="user_right">
+
+            <div class="user_right_box  mb20 pb20">
+                    <div class="user_title">
+                        <h1 class="fl"><i class="ico_reseive"></i>红包总览</h1>
+                        <div class="fg_line"></div>
+                    </div>
+                    <div class="ui-tabs clearfix ui-content">
+                        <div class="fl">
+                            <h2>我领到的红包</h2>
+                            <div class="clearfix">
+                                <div class="content-up">
+                                    <span>待使用红包总额</span>
+                                    <span>已使用红包总额</span>
+                                    <span>已过期红包总额</span>
+                                </div>
+                                <div class="content-down color-yellow1">
+                                    <span>{{ not_use_price }}元</span>
+                                    <span>{{ has_use }}元</span>
+                                    <span>{{ lose_use }}元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_right_box  mb20 pb20">
+                    <div id="tabs" class="ui-tabs">
+                        <div class="user_title">
+                            <h1 class="fl"><i class="ico_reseive"></i>待使用的红包</h1>
+                        </div>
+                        <div id="tabs_content">
+                            <div>
+                                <table border="0" class="tab-thead">
+                                    <thead>
+                                        <tr>
+                                            <th width="93">金额</th>
+                                            <th width="118">发放时间</th>
+                                            <th width="116">名称</th>
+                                            <th width="147">备注</th>
+                                            <th width="147">操作</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                {% if redpaper_list %}
+                                <table border="0" class="tab-thead text-center">
+                                    <tbody>
+                                        {% for foo in redpaper_list %}
+                                        <tr>
+                                            <td width="93">{{ foo.price }}</td>
+                                            <td width="118">{{ foo.get_time }}</td>
+                                            <td width="116">{{ foo.red_name }}</td>
+                                            <td width="147">{{ foo.remarks }}</td>
+                                            <td width="147"><a href="">投资</a></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% else %}
+                                <div class="empty-box">
+                                    <div style="text-align:center;margin:30px 0 0;line-height:25px;color:#888;font-size:16px;">没有更多红包</div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_right_box  mb20 pb20">
+                    <div class="user_title">
+                        <h1><i class="ico_send"></i>已使用的红包</h1>
+                    </div>
+                    <div id="tabs_content">
+                        <div>
+                            <table border="0" class="tab-thead">
+                                <thead>
+                                    <tr>
+                                        <th width="93">金额</th>
+                                        <th width="118">发放时间</th>
+                                        <th width="147">使用时间</th>
+                                        <th width="116">名称</th>
+                                        <th width="147">备注</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            {% if has_use_list %}
+                            <table border="0" class="tab-thead text-center">
+                                <tbody>
+                                    {% for foo in has_use_list %}
+                                    <tr>
+                                        <td width="93">{{ foo.price }}</td>
+                                        <td width="118">{{ foo.get_time }}</td>
+                                        <td width="147">{{ foo.con_time }}</td>
+                                        <td width="116">{{ foo.red_name }}</td>
+                                        <td width="147">{{ foo.remarks }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            {% else %}
+                            <div class="empty-box">
+                                <div style="text-align:center;margin:30px 0 0;line-height:25px;color:#888;font-size:16px;">没有更多红包</div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="user_right_box  mb20 pb20">
+                    <div class="user_title">
+                        <h1><i class="ico_send"></i>已过期的红包</h1>
+                    </div>
+                    <div id="tabs_content">
+                        <div>
+                            <table border="0" class="tab-thead">
+                                <thead>
+                                    <tr>
+                                        <th width="93">金额</th>
+                                        <th width="118">发放时间</th>
+                                        <th width="147">过期时间</th>
+                                        <th width="116">名称</th>
+                                        <th width="147">备注</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            {% if lose_list %}
+                            <table border="0" class="tab-thead text-center">
+                                <tbody>
+                                    {% for foo in lose_list %}
+                                    <tr>
+                                        <td width="93">{{ foo.price }}</td>
+                                        <td width="118">{{ foo.get_time }}</td>
+                                        <td width="147">{{ foo.deadline }}</td>
+                                        <td width="116">{{ foo.red_name }}</td>
+                                        <td width="147">{{ foo.remarks }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            {% else %}
+                            <div class="empty-box">
+                                <div style="text-align:center;margin:30px 0 0;line-height:25px;color:#888;font-size:16px;">没有更多红包</div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="blank"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index_v2.all.min.css' %}">
+<script type="text/javascript" src="{% static 'js/common_v2.all.min.js' %}"></script>
+<div class="wrap">
+<div class="blank"></div>
+<div class="w1100 clearfix pt23 pb23">
+<div class="ui_user_nav">
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li class="user_select"><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+    <li><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
+</ul>
+<!--个人中心左侧开始-->
+</div>
+<div class="ui_user_right f_l">
+	<div class="ui_user_right">
+	<div class="p_account_personalset">
+        <link href="{% static 'css/account_personalset.css' %}" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/weebox.css' %}">
+        <script src="{% static 'js/jquery.bgiframe.js' %}"></script>
+        <script src="{% static 'js/jquery.weebox.js' %}"></script>
+		<script src="{% static 'js/p2p-ui-checkbox.js' %}"></script>
+        <script>
+        $(function() {
+            $('#modify').submit(function() {
+                var is_check_email = 1;
+                if (0==1){
+                    is_check_email = 0;
+                }
+                var $checks_e =  $(".email-cont ul li");
+                if ($checks_e.find("a.check-select").length > 0 && is_check_email == 1) {
+                    var html = '请先绑定邮箱';
+                    $.weeboxs.open(html, {
+                        boxid: null,
+                        contentType: 'text',
+                        showButton: true,
+                        showOk: true,
+                        okBtnName: '去绑定',
+                        showCancel: false,
+                        title: '绑定邮箱',
+                        width: 270,
+                        height: 25,
+                        type: 'wee',
+                        onclose: function() {
+                            null
+                        },
+                          onok:function(){
+                            location.href='/account/addemail';
+                        $.weeboxs.close();
+                    }
+                    });
+                    return false;
+                }
+            });
+
+            $(".p2p-ui-checkbox").p2pUiCheckbox();
+        });
+        </script>
+                <div class="ui-box">
+                    <div class="h-title">
+                        <h2><i></i>个人设置</h2>
+                        <div class="h-line"></div>
+                        <ul class="sub-nav clearfix">
+                            <li>
+                                <a href="/index/install/">账户设置</a>
+                            </li>
+                            <li class="select">
+                                <a href="/index/setmessage/">消息设置</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="r-cont">
+                    <form method="post" action="" id="modify">
+                        <input type="hidden" id="token_id" name="token_id" value="1448716692049"><input type="hidden" id="token" name="token" value="174cd8c7654002d7cea650f156585854">                        <div class="sms-subs clearfix">
+                            <div class="subs-tit">短信通知：</div>
+                            <div class="subs-cont-wrap">
+                                <div class="subs-cont clearfix">
+                                    <span class="gray">信息变更：</span>
+                                    <ul>
+                                        <li>
+                                            <div class="p2p-ui-checkbox">
+                                                <span class="common-sprite checked-disable"></span>
+                                                <span class="cur-txt">密码变更</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p2p-ui-checkbox">
+                                                <span class="common-sprite checked-disable"></span>
+                                                <span class="cur-txt">手机号变更</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="p2p-ui-checkbox">
+                                                <span class="common-sprite checked-disable"></span>
+                                                <span class="cur-txt">银行卡变更</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="subs-cont clearfix">
+                                    <span class="gray">资金变动：</span>
+                                    <ul>
+                                        <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <span class="common-sprite checked-disable"></span>
+                                            <span class="cur-txt">提现申请</span>
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal check-select"></a>
+                                            <span>提现结果</span>
+                                            <input type="hidden" name="sms_config[6]" value="1">
+                                            </div>
+                                        </li>
+
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal"></a>
+                                            <span>充值成功</span>
+                                            <input type="hidden" name="sms_config[34]" value="0">
+                                            </div>
+                                        </li>
+
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal"></a>
+                                            <span>当日返利</span>
+                                            <input type="hidden" name="sms_config[31]" value="0">
+                                            </div>
+                                        </li>
+
+                                                                            </ul>
+                                </div>
+                                <div class="subs-cont clearfix">
+                                    <span class="gray">项目状态：</span>
+                                    <ul>
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal"></a>
+                                            <span>项目投资</span>
+                                            <input type="hidden" name="sms_config[18]" value="0">
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal check-select"></a>
+                                            <span>项目回款</span>
+                                            <input type="hidden" name="sms_config[9]" value="1">
+                                            </div>
+                                        </li>
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal check-select"></a>
+                                            <span>项目流标</span>
+                                            <input type="hidden" name="sms_config[11]" value="1">
+                                            </div>
+                                        </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sms-subs bor-b0  clearfix">
+                            <div class="subs-tit">邮件通知：</div>
+                            <div class="subs-cont-wrap">
+                                <div class="subs-cont email-cont clearfix">
+                                    <span class="gray">项目状态：</span>
+                                    <ul>
+                                                                                <li>
+
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal"></a>
+                                            <span>合同下发</span>
+                                            <input type="hidden" name="email_config[32]" value="0">
+                                            </div>
+                                        </li>
+                                                                                <li>
+
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal"></a>
+                                            <span>项目回款</span>
+                                            <input type="hidden" name="email_config[9]" value="0">
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="subs-cont email-cont clearfix">
+                                    <span class="gray">其他：</span>
+                                    <ul>
+                                                                                <li>
+                                            <div class="p2p-ui-checkbox">
+                                            <a href="javascript:void(0)" data-ui="checkbox" class="common-sprite check-normal"></a>
+                                            <span>月对账单</span>
+                                            <input type="hidden" name="email_config[33]" value="0">
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sum-btn">
+                            <input class="common-sprite btn-red-h46" type="submit" id="submit_button" value="保存">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

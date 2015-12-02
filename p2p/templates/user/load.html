@@ -10,12 +10,12 @@
 .user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
 .user_nav h2{font-size:18px; padding:10px 19px;}
 .user_nav li{line-height:38px; padding:0px 6px; position: relative;}
-.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:114px !important;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:153px !important;}
 .user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
-.user_nav li.user_select a i{background:#f96648;}  
-.user_nav li a:hover{color: #010101 !important} 
-.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}   
-.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;} 
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
 .user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
 </style>
 <!--个人中心左侧开始-->
@@ -23,18 +23,16 @@
 <ul>
    	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
     <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
-    <li class="user_select"><a href="/index/load/"><!----><i class="ico_xiangmu"></i>已投项目</a></li>
-    <li><a href="http://www.firstp2p.com/account/charge"><i class="ico_chongzhi"></i>充值</a></li>
-    <li><a href="http://www.firstp2p.com/account/carry"><i class="ico_tixian"></i>提现</a></li>
-    <li><a href="http://www.firstp2p.com/account/money"><i class="ico_jilu"></i>资金记录</a></li>
-    <li><a href="http://www.firstp2p.com/account/loan"><i class="ico_huikuan"></i>回款计划</a></li>
-    <li><a href="http://www.firstp2p.com/account/refund"><i class="ico_huankuan"></i>还款计划</a></li>        
-    <li><a href="http://www.firstp2p.com/account/contract"><i class="ico_hetong"></i>合同列表</a></li>
+    <li class="user_select"><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
     <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
-        <li><a href="http://www.firstp2p.com/account/coupon"><i class="ico_yaoqing"></i>邀请返利</a></li>
-        <li><a href="http://www.firstp2p.com/account/bonus"><i class="ico_redp"></i>网信红包</a></li>
-        <li><a href="http://www.firstp2p.com/user/loanIntentionEnter"><i class="ico_redp"></i>我想借款</a></li>
-    <!--li ><a href="/seller/list"><i class="ico_redp"></i>商家服务</a></li-->
+    <li><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
 </ul>
 <!--个人中心左侧开始-->
 
@@ -43,50 +41,80 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/user_web2.css' %}">
 	<div class="user_right">
         <div class="user_right_box mb15 user_right_box_v2">
-                        <div class="user_title"><h1><a href="http://www.firstp2p.com/account/load?type=1" class="see_lgl fr pr15">只查看我投资的通知贷</a><i class="ico_xiangmu"></i>已投项目</h1></div>
-            
-            <form id="search" action="./投资的项目 - 网信理财_files/投资的项目 - 网信理财.html" method="get">
-            <div class="screening clearfix">
-                <div class="select_box" data-name="status"><input type="hidden" name="status" id="status" value="0">
-                    <div class="j_select">全部投资状态</div>
-                    <ul class="select_ul none j_selectContent">
-                        <li data-value="0" data-select="1">全部投资状态</li>
-                        <li data-value="1">投标中</li>
-                        <li data-value="2">满标</li>
-                        <li data-value="4">回款中</li>
-                        <li data-value="5">已回款</li>
-                    </ul>
+            <div class="user_title"><h1><a href="http://www.firstp2p.com/account/load?type=1" class="see_lgl fr pr15">只查看我投资的通知贷</a><i class="ico_xiangmu"></i>已投项目</h1></div>
+            <form id="search" action="/index/load/" method="post">
+                {% csrf_token %}
+                <div class="screening clearfix">
+                    <div class="select_box" data-name="status">
+                        <div class="j_select">全部投资状态</div>
+                        <ul class="select_ul none j_selectContent">
+                            <li data-value="0" data-select="1">全部投资状态</li>
+                            <li data-value="1">投标中</li>
+                            <li data-value="2">满标</li>
+                            <li data-value="4">回款中</li>
+                            <li data-value="5">已回款</li>
+                        </ul>
+                    </div>
+                    <div class="sel_time">
+                        <span>时间</span>
+                        {{ load.date_start }}<span class="pl10">-</span>{{ load.date_end }}
+                    </div>
+                    <input type="submit" value="筛选" class="button_shaixian fr">
                 </div>
-                <input type="hidden" name="type" value="">
-                <div class="sel_time">
-                    <span>时间</span>
-                    <input type="text" class="time_box hasDatepicker" id="dateInput1" name="date_start" value=""><span class="pl10">-</span><input type="text" class="time_box hasDatepicker" id="dateInput2" name="date_end" value="">
-                </div>
-                <input type="submit" value="筛选" class="button_shaixian fr">
-            </div>
             </form>
-
         </div>
-
-                <div class="main">
-            <div class="empty-box">没有投资项目</div>
+        <div class="main">
+            {% if trade_arr %}
+                <div>
+                    <table class="plan" style="width: 918px;">
+                    <colgroup>
+                            <col width="350">
+                            <col width="200">
+                            <col width="250">
+                            <col width="118">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tl pl30">项目名称</th>
+                                <th>投资时间</th>
+                                <th><div class="tl pl30">状态</div></th>
+                                <th><div class="tr pr25">金额（元）</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for trade in trade_arr %}
+                            {% for children_comment in trade.children_comment %}
+                            <tr>
+                                <td><div class="tl pl25">{{ children_comment.1 }}</div></td>
+                                <td>{{ trade.date_publish }}</td>
+                                <td><div class="tl pl25">{{ children_comment.2 }}</div></td>
+                                <td><div class="tr pr25 f16">{{ trade.price }}</div></td>
+                            </tr>
+                            {% endfor %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% include 'pagination.html' %}
+                <link rel="stylesheet" type="text/css" href="{% static 'css/paginaten.v1.css' %}">
+            {% else %}
+                <div class="empty-box">没有投资项目</div>
+            {% endif %}
         </div>
-            </div>
-
-
+    </div>
 <!--申请赎回内容-->
-<div class="redemption">
-    <div class="redemption_time">
-        <h3 class="f16" id="_js_title">今日申请赎回，2015-02-12到账</h3>
-        <h4 class="color-blue1 f12" id="_js_is_holiday"></h4>
+    <div class="redemption">
+        <div class="redemption_time">
+            <h3 class="f16" id="_js_title">今日申请赎回，2015-02-12到账</h3>
+            <h4 class="color-blue1 f12" id="_js_is_holiday"></h4>
+        </div>
+        <div class="redemption_con">
+            <p>项目名称<strong>：<span id="_js_name">利滚利001号</span></strong></p>
+            <p>投资金额：<span id="_js_money">1000,00.00元</span></p>
+            <p>赎回本息：<span id="_js_sum" class="color-yellow1">1000,00.00元</span></p>
+            <p style="color:#999;padding-top:0">赎回不可撤销</p>
+        </div>
     </div>
-    <div class="redemption_con">
-        <p>项目名称<strong>：<span id="_js_name">利滚利001号</span></strong></p>
-        <p>投资金额：<span id="_js_money">1000,00.00元</span></p>
-        <p>赎回本息：<span id="_js_sum" class="color-yellow1">1000,00.00元</span></p>
-        <p style="color:#999;padding-top:0">赎回不可撤销</p>
-    </div>
-</div>
 <!--申请赎回内容 end-->
 <script>
 function clickopen(id){

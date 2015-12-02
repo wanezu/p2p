@@ -1,0 +1,22 @@
+.pass-item-tip-password { position: absolute; left: 414px; top: 1px;*top: -8px; zoom: 1; z-index: 20; font-size: 12px; color: #000; display: none;}
+.pass-item-tip-password .pass-item-tiptext { display: block; }
+.pass-item-tip-password .pwd-checklist-wrapper .pwd-checklist-arrow { position: absolute; top: 0; top: 4px\9;left: 0; }
+.pass-item-tip-password .pwd-checklist-wrapper .pwd-checklist-arrow em { position: absolute; left: 0; top: 0; font-size: 28px;font-size: 16px\9; font-family: arial, "Microsoft Yahei"; }
+.pass-item-tip-password .pwd-checklist-wrapper .pwd-checklist-arrow em.arrowa { color: #f9d147; left: 0; }
+.pass-item-tip-password .pwd-checklist-wrapper .pwd-checklist-arrow em.arrowb { color: #fcfde9; left: 1px; }
+.pass-item-tip-password .pwd-checklist { margin-left: 8px !important; padding: 4px 11px 6px; border: 1px solid #f9d147; background: #fcfde9; width: 255px; }
+.pass-item-tip-password .pwd-checklist li{font-size: 12px;}
+.pass-item-tip-password .pwd-checklist .pwd-checklist-item-error { background-position: 0 -24px; }
+.pass-item-tip-password .pwd-checklist .pwd-checklist-item { line-height: 17px; background-image: url(../images/icons_pwd.png); background-repeat: no-repeat; margin-bottom: 8px;  padding: 0 0 0 22px; }
+.pass-item-tip-password .pwd-checklist .pwd-checklist-item-success { background-position: 0 0; }
+.pass-item-tip-password .pwd-checklist .pwd-checklist-item-normal { background-position: 0 -46px; }
+.pass-item-tip-password .pwd-checklist .safety-level { margin-bottom: 13px; padding: 0;line-height: 18px;}
+.pass-item-tip-password .safety-level span.process { background: #dbdccb; height: 10px; width: 25px; display: inline-block; margin-right: 1px; }
+.pass-item-tip-password .safety-level span.low { background: #f85e3e; }
+.pass-item-tip-password .safety-level span.middle { background: #f56902; }
+.pass-item-tip-password .safety-level span.high { background: #65bc25; }
+.pass-item-tip-password .safety-level .pr9 { padding-right: 9px; }
+.pass-item-tip-password .safety-level .ml4 { padding-left: 4px; }
+.color-low {color: #f85e3e}
+.color-mid {color: #f56902}
+.color-high {color: #65bc25}

@@ -23,6 +23,7 @@ class Trade(models.Model):
     date_publish = models.DateTimeField(auto_now_add=True,verbose_name='发布时间')
     classify = models.ForeignKey(Classify,blank=True,null=True,verbose_name='标的种类')
     term = models.CharField(max_length=50,verbose_name='投资期限')
+    repayment = models.CharField(max_length=50,verbose_name='还款期限',default=0)
     price = models.DecimalField(max_digits=9,decimal_places=2,blank=True,default=0.00,verbose_name='总额')
     incomemode = models.CharField(max_length=50,verbose_name='收益方式')
     status = models.BooleanField(default=False,verbose_name='审核状态')

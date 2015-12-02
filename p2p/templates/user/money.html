@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
+<script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
+<div class="wrap">
+<div class="blank"></div>
+<div class="user_nav f_l mr5">
+<style>
+.user_nav{width:168px; border:1px solid #e3e3e3;-webkit-box-shadow: none;-moz-box-shadow:none; box-shadow:none; padding:0; padding-bottom:10px;}
+.user_nav h2{font-size:18px; padding:10px 19px;}
+.user_nav li{line-height:38px; padding:0px 6px; position: relative;}
+.user_nav li a{color:#010101; height:38px; display:inline-block;padding:0px 0px 0px 43px !important; width:153px !important;}
+.user_nav li a i {display: inline-block !important; background-image: none; width: 5px; height: 5px; background: #c8c8c8; position: absolute; top: 17px; left: 32px;}
+.user_nav li.user_select a i{background:#f96648;}
+.user_nav li a:hover{color: #010101 !important}
+.user_nav li.user_select a{background:#f4f2f2; color:#f96648; text-decoration:none;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+.user_nav li a em,.user_nav li a:hover em,.user_nav li.user_select em{background:#f96648; margin-right:10px; color:#fff;}
+</style>
+<!--个人中心左侧开始-->
+<h2>我的账户</h2>
+<ul>
+   	<li><a href="/index/member/"><i class="ico_gailan"></i>账户总览</a></li>
+    <li><a href="/index/install/"><i class="ico_redp"></i>个人设置</a></li>
+    <li><a href="/index/load/"><i class="ico_xiangmu"></i>已投项目</a></li>
+    <li><a href="/index/charge/"><i class="ico_chongzhi"></i>充值</a></li>
+    <li><a href="/index/cash/"><i class="ico_tixian"></i>提现</a></li>
+    <li class="user_select"><a href="/index/money/"><i class="ico_jilu"></i>资金记录</a></li>
+    <li><a href="/index/loan/"><i class="ico_huikuan"></i>回款计划</a></li>
+    <li><a href="/index/refund/"><i class="ico_huankuan"></i>还款计划</a></li>
+    <li><a href="/index/contract/"><i class="ico_hetong"></i>合同列表</a></li>
+    <!--li ><a href="/uc_account-invitation"><i class="ico_yonghu"></i>邀请好友</a></li-->
+    <li><a href="/index/coupon/"><i class="ico_yaoqing"></i>邀请返利</a></li>
+    <li><a href="/index/bonus/"><i class="ico_redp"></i>平台红包</a></li>
+</ul>
+<!--个人中心左侧开始-->
+</div>
+<div class="user_right f_l">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/user_web2.css' %}">
+<script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+
+<div class="user_right_box">
+	<div class="user_title">
+		<h1>
+			<i class="ico_jilu"></i>资金记录
+		</h1>
+	</div>
+	<form id="search" action="/index/money/" method="post">
+            {% csrf_token %}
+            <div class="screening clearfix">
+                 <div class="select_box" data-name="log_info">
+                     {{ search.log_info }}
+                     <div class="j_select">全部类型</div>
+                     <ul class="select_ul none j_selectContent">
+                        <li data-value="">全部类型</li>
+                        <li data-value="充值">充值</li>
+                        <li data-value="提现申请">提现申请</li>
+                        <li data-value="提现成功">提现成功</li>
+                        <li data-value="提现失败">提现失败</li>
+                        <li data-value="投标冻结">投标冻结</li>
+                        <li data-value="投资放款">投资放款</li>
+                        <li data-value="取消投标">取消投标</li>
+                        <li data-value="还本">还本</li>
+                        <li data-value="支付收益">支付收益</li>
+                        <li data-value="提前还款">提前还款</li>
+                        <li data-value="提前还款补偿金">提前还款补偿金</li>
+                        <li data-value="逾期罚息">逾期罚息</li>
+                        <li data-value="邀请返利">邀请返利</li>
+                        <li data-value="投资返利">投资返利</li>
+                        <li data-value="投资管理费">投资管理费</li>
+                        <li data-value="招标成功">招标成功</li>
+                        <li data-value="偿还本息">偿还本息</li>
+                        <li data-value="提前还款申请">提前还款申请</li>
+                        <li data-value="提前还款申请通过">提前还款申请通过</li>
+                        <li data-value="提前还款申请拒绝">提前还款申请拒绝</li>
+                        <li data-value="服务费和担保费">服务费和担保费</li>
+                        <li data-value="转出资金">转出资金</li>
+                        <li data-value="转入资金">转入资金</li>
+                        <li data-value="账户余额贴息">账户余额贴息</li>
+                        <li data-value="投标贴息">投标贴息</li>
+                        <li data-value="转账申请">转账申请</li>
+                        <li data-value="转账申请失败">转账申请失败</li>
+                        <li data-value="注册返利">注册返利</li>
+                        <li data-value="邀请返利">邀请返利</li>
+                        <li data-value="平台贴利率">平台贴利率</li>
+                        <li data-value="平台贴息">平台贴息</li>
+                     </ul>
+                </div>
+                <div class="sel_time">
+                    <span style="padding-left:100px;">时间</span>{{ search.start }} &nbsp;&nbsp;&nbsp;-{{ search.end }}
+                </div>
+                <input type="hidden" name="source_url" value="{{ request.META.HTTP_REFERER }}">
+                <input type="submit" name="export" value="导出" class="color-blue1 fr" style="text-decoration: underline;margin: 10px 0px 0px 20px;border: none;background: none;font-size: 14px;">
+                <span style="padding-left:5px;" class="fr">&nbsp;</span>
+                <input type="submit" value="筛选" class="button_shaixian fr">
+            </div>
+        </form>
+</div>
+<section>
+	<div class="project clearfix u_zijin">
+		<div class="pro_detailed clearfix">
+            {% if trade_arr %}
+                <div>
+                    <table class="plan">
+                    <colgroup>
+                            <col width="350">
+                            <col width="200">
+                            <col width="250">
+                            <col width="118">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="tl pl30">项目名称</th>
+                                <th><div class="tl pl30">状态</div></th>
+                                <th>投资时间</th>
+                                <th><div class="tr pr25">金额（元）</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for trade in trade_arr %}
+                            <tr>
+                            {% for children_comment in trade.children_comment %}
+                                <td><div class="tl pl25">{{ children_comment.0 }}</div></td>
+                                <td><div class="tl pl25">{{ children_comment.1 }}</div></td>
+                            {% endfor %}
+                                <td>{{ trade.date_publish }}</td>
+                                <td><div class="tr pr25 f16">{{ trade.price }}</div></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-box">没有投资项目</div>
+            {% endif %}
+        </div>
+	</div>
+</section>
+</div>
+
+<div class="blank"></div>
+
+</div>
+{% endblock %}
