@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content %}
+<script>
+$('#open01').removeClass('active');
+$('#open05').addClass('active');
+</script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/index_v2.all.min.css' %}">
+<script type="text/javascript" src="{% static 'js/common_v2.all.min.js' %}"></script>
+<div class="wrap">
+<link href="{% static 'css/collection_web2.css' %}" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{% static 'js/ajaxfileupload.js' %}"></script>
+<div class="mauto clearfix">
+       <section>
+            <div class="shadow">
+                <div class="mess_title"><h1><i></i>收款银行卡信息</h1></div>
+                <div class="collection">
+                    <form name="Jcarry_From" id="Jcarry_From_2" action="http://www.firstp2p.com/account/savebank" method="post" enctype="multipart/form-data">
+                    <table width="100%">
+                        <input type="hidden" name="id" value="3449175">
+                        <input type="hidden" name="user_bank_id" value="3449175">
+                        <input type="hidden" id="token_id" name="token_id" value="1449765680851"><input type="hidden" id="token" name="token" value="fbb8c4eb8a44c45d2b8efacedca4de7e">                        <tbody class="colltab">
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 姓名：</th>
+                                <td>武**</td>
+                            </tr>
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 证件号：</th>
+                                <td>34**************12</td>
+                            </tr>
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 开户名：</th>
+                                <td>
+                                    武**                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 选择银行：</th>
+                                <td>
+                                    <select class="select_box w140" id="Jcarry_bank_id" name="bank_id">
+                                        <option value="">请选择</option>
+                                                                                <option value="1" day="3">中国工商银行</option>
+                                                                                <option value="3" day="3" selected="selected">中国建设银行</option>
+                                                                                <option value="2" day="3">中国农业银行</option>
+                                                                                <option value="8" day="3">中国银行</option>
+                                                                                <option value="6" day="3">中国邮政储蓄银行</option>
+                                                                                <option value="9" day="3">交通银行</option>
+                                                                                <option value="4" day="3">招商银行</option>
+                                                                                <option value="5" day="3">中国光大银行</option>
+                                                                                <option value="10" day="3">中信银行</option>
+                                                                                <option value="61" day="0">浦发银行</option>
+                                                                                <option value="17" day="3">中国民生银行</option>
+                                                                                <option value="41" day="0">平安银行</option>
+                                                                                <option value="7" day="3">兴业银行</option>
+                                                                                <option value="11" day="3">华夏银行</option>
+                                                                                <option value="62" day="0">广发银行</option>
+                                                                                <option value="39" day="0">北京银行</option>
+                                                                                <option value="43" day="0">上海银行</option>
+                                                                                <option value="38" day="3">海口联合农商银行</option>
+                                                                            </select>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 银行卡号：</th>
+                                <td><input type="text" class="idbox w315" name="bankcard" id="Jcarry_bankcard" value=""></td>
+                            </tr>
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 确认卡号：</th>
+                                <td><input type="text" class="idbox w315" name="reBankcard" id="Jcarry_rebankcard" value=""></td>
+                            </tr>
+
+                            <!-- add  -->
+                            <tr>
+                                <th><i class="ico_asterisk"></i> 申请照片：</th>
+                                <td>
+                                    <div class="file_box fl">
+                                        <input type="hidden" id="hidden_previous_id" value="" name="image">
+                                        <input type="file" class="hidden_file" id="fileToUpload" name="fileToUpload" onchange="upload()">
+                                        <input type="text" class="idbox w315 fl" value="" id="imageName">
+                                        <input type="submit" class="but-gray but-yellow ml10  btn_lx fl" value="浏览">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td class="color-red1 f14">
+                                    <div class="fl" style="height:50px;">
+                                        <p>要求：</p>
+                                    </div>
+                                    <div>
+                                        <p>1.本人持身份证，目标银行卡，请他人协助，拍摄一张照片。确保照片中，<em class="color-red1">面部，身份证，银行卡，3者</em>清晰可见|<a target="_blank" href="http://www.firstp2p.com/static/v1/images/user/demo_bankinfo_image.jpg" class="color-red1">（范例查看）</a></p>
+                                        <p class="pb25">2.图片格式仅限JPG,PNG，尺寸不大于1.5M。</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" height="150" valign="top">
+                                    <input type="submit" value="提交审核" class="but-gray but-yellow btn_tj" onclick="return checkData();">
+                                    <input type="reset" value="重置" id="_js_reset" class="but-gray btn_cz">
+                                    <span class="pl10 f14 color-gray">您提交成功后，我们将在3日内审核</span>
+                                </td>
+                            </tr>
+                            <!--  -->
+                            <script>$("#Jcarry_rebankcard,#Jcarry_bankcard").on("paste copy" , function(){
+    return false;
+});</script>
+                        </tbody>
+                    </table>
+                    </form>
+                </div>
+            </div>
+       </section>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        //重置
+        $("#_js_reset").click(function(){
+            var hidden_previous_id = $('#hidden_previous_id').val();
+            //判断是否上传过了。如果有需要删除先前的图片
+            if(hidden_previous_id) {
+                del_previous_image(hidden_previous_id);
+            }
+            $('#hidden_previous_id').val('');
+        });
+
+        //银行网点
+        // $("select[name='bank_id']").bind("change",function(){
+        //     bank_site();
+        // });
+        // setTimeout("bank_site();",1000);
+        //手动填写
+        $("#Jcarry_From_2").on("click", "#_js_shoudong" ,function(){
+            $("#_js_shoudong_input").show();
+        });
+
+        $("#Jcarry_From_2").on("change", "#_js_bankone" ,function(){
+            $("#_js_shoudong_input").val('');
+            $("#_js_shoudong_input").hide();
+        });
+
+        // init region
+                var devlv1Option = $("select[name='region_lv1'] option[value='" + $("#deflv1").val() + "']")[0];
+                if (devlv1Option) {
+                    devlv1Option.selected = true;
+                    load_select("1");
+                    var devlv2Option = $("select[name='region_lv2'] option[value='" + $("#deflv2").val() + "']")[0];
+                    if (devlv2Option) {
+                        devlv2Option.selected = true;
+                        load_select("2");
+                        var devlv3Option = $("select[name='region_lv3'] option[value='" + $("#deflv3").val() + "']")[0];
+                        if (devlv3Option) {
+                            devlv3Option.selected = true;
+                            load_select("3");
+                            var devlv4Option = $("select[name='region_lv4'] option[value='" + $("#deflv4").val() + "']")[0];
+                            if (devlv4Option) {
+                                devlv4Option.selected = true;
+                            }
+                        }
+                    }
+                }
+    });
+
+    function load_select(lv)
+    {
+        var name = "region_lv"+lv;
+        var next_name = "region_lv"+(parseInt(lv)+1);
+        var id = $("select[name='"+name+"']").val();
+
+        if(lv==1)
+        var evalStr="regionConf.r"+id+".c";
+        if(lv==2)
+        var evalStr="regionConf.r"+$("select[name='region_lv1']").val()+".c.r"+id+".c";
+        if(lv==3)
+        var evalStr="regionConf.r"+$("select[name='region_lv1']").val()+".c.r"+$("select[name='region_lv2']").val()+".c.r"+id+".c";
+
+        if(id==0)
+        {
+            var html = "<option value='0'>="+LANG['SELECT_PLEASE']+"=</option>";
+        }
+        else
+        {
+            var regionConfs=eval(evalStr);
+            evalStr+=".";
+            var html = "<option value='0'>="+LANG['SELECT_PLEASE']+"=</option>";
+            for(var key in regionConfs)
+            {
+                html+="<option value='"+eval(evalStr+key+".i")+"'>"+eval(evalStr+key+".n")+"</option>";
+            }
+        }
+        $("select[name='"+next_name+"']").html(html);
+
+        if(lv == 4)
+        {
+            load_delivery();
+        }
+        else
+        {
+            load_select(parseInt(lv)+1);
+        }
+
+
+    }
+
+    //验证图片
+    function checkData() {
+        //区域
+        if($("#Jcarry_bank_id").val() == 0){
+            $.showErr('请选择银行',function(){
+                $("#hidden_previous_id").focus();
+            },'修改银行卡信息不成功');
+            return false;
+        }
+        //区域
+       // if($("select[name='region_lv3']").val() == 0){
+       //     $.showErr('请选择区域',function(){
+       //         $("#hidden_previous_id").focus();
+       //     },'修改银行卡信息不成功');
+       //     return false;
+       // }
+        //卡号
+        if($("#Jcarry_rebankcard").val() != $("#Jcarry_bankcard").val() || $("#Jcarry_bankcard").val() == ""){
+            $.showErr('请填写正确的银行卡号，并确保两次输入一致！',function(){
+                $("#Jcarry_bankcard").focus();
+            },'修改银行卡信息不成功');
+            return false;
+        }
+        //联行
+       // if($("input[name='bankzone']").val() == ''){
+       //     $.showErr('请选择开户行网点',function(){
+       //         $("#hidden_previous_id").focus();
+       //     },'修改银行卡信息不成功');
+       //     return false;
+       // }
+
+        var img = $('#hidden_previous_id').val();
+        if(img ) {
+            return true;
+        }else{
+            $.showErr('请上传申请照片',function(){
+                $("#hidden_previous_id").focus();
+            },'修改银行卡信息不成功');
+            return false;
+        }
+    }
+
+
+    //图片上传
+    function upload() {
+        var hidden_previous_id = $('#hidden_previous_id').val();
+        //判断是否上传过了。如果有需要删除先前的图片
+        if(hidden_previous_id) {
+            del_previous_image(hidden_previous_id);
+            $('#hidden_previous_id').val('');
+        }
+{#        $.ajaxFileUpload({#}
+{#            url:'/index/bankinfoImage',#}
+{#            secureuri :false,#}
+{#            fileElementId :'fileToUpload',#}
+{#            dataType : 'json',#}
+{#            success : function (data, status){#}
+{#                alert(1212);#}
+{#                if(typeof(data.code) != 'undefined'){#}
+{#                    if(data.code != '0000'){#}
+{#                        $.showErr(data.message,function(){#}
+{#                            $("#hidden_previous_id").focus();#}
+{#                        });#}
+{#                       // alert(data.message);#}
+{#                        $('#imageName').val('');#}
+{#                    }else{#}
+{#                        $('#hidden_previous_id').val(data.message.image_id);#}
+{#                        //$('#imageName').val(data.message.filename);#}
+{#                        $('#imageName').val('已上传');#}
+{#                    }#}
+{#                }#}
+{#            },#}
+{#            error: function(data, status, e){#}
+{#                alert(data.code);#}
+{#            }#}
+{#        })#}
+        $.get("/index/bankinfoImage",{'a':'de'}, function(data){
+{#            $('#result').html(ret);#}
+            if(typeof(data.code) != 'undefined'){
+                    if(data.code != '0000'){
+                        $.showErr(data.message,function(){
+                            $("#hidden_previous_id").focus();
+                        });
+                       // alert(data.message);
+                        $('#imageName').val('');
+                    }else{
+                        $('#hidden_previous_id').val(data.message.image_id);
+                        //$('#imageName').val(data.message.filename);
+                        $('#imageName').val('已上传');
+                    }
+                }
+        })
+    }
+
+    //删除上一个上传的图片
+    function del_previous_image(id) {
+        if(id) {
+            $.ajax({
+                   type: "POST",
+                   url: '/account/bankinfoImageDel',
+                   data: "id="+id,
+                   dataType:"json",
+                   success: function(data){
+                       if(data.code != '0000') {
+                           return false;
+                       }else{
+                           return true;
+                       }
+                   }
+            });
+        }
+    }
+
+    //银行网点
+    function bank_site(){
+        var c = $("select[name='region_lv3']").find("option:selected").text();
+        var p = $("select[name='region_lv2']").find("option:selected").text();
+        var b = $("select[name='bank_id']").find("option:selected").text();
+        var n = '';
+        var data = {c:c,p:p,n:n,b:b};
+        $.post('/api/banklist',data,function(rs){
+            if(rs != ""){
+                $("#_js_bank_site").html(rs);
+            }
+        });
+    }
+</script>
+</div>
+{% endblock %}

@@ -2,21 +2,16 @@
 	<div class="our-clients">
 		<div class="container">
 			<div class="our-clients-head text-center">
-				<h3>Our Clients</h3>
+				<h3>合作伙伴</h3>
 			</div>
 			<!---strat-image-cursuals---->
                   <div class="scroll-slider">
 							<div class="nbs-flexisel-container">
 							<div class="nbs-flexisel-inner">
 							<ul class="flexiselDemo3 nbs-flexisel-ul" style="left: -253.6px; display: block;">
-							<li><img src="{% static 'images/c1.jpg' %}"></li>
-							<li><img src="{% static 'images/c2.jpg' %}"></li>
-							<li><img src="{% static 'images/c3.jpg' %}"></li>
-							<li><img src="{% static 'images/c4.jpg' %}"></li>
-							<li><img src="{% static 'images/c1.jpg' %}"></li>
-							<li><img src="{% static 'images/c2.jpg' %}"></li>
-							<li><img src="{% static 'images/c3.jpg' %}"></li>
-							<li><img src="{% static 'images/c4.jpg' %}"></li>
+                                {% for toget in friendly %}
+                                    <li style="margin: 30px;"><a href="{{ toget.address }}" target="_blank"><img src="../../uploads/{{ toget.photo }}"></a></li>
+                                {% endfor %}
 							</ul>
 							<div class="nbs-flexisel-nav-left" style="display:none"></div>
 							<div class="nbs-flexisel-nav-right" style="display:none"></div></div></div>
@@ -57,14 +52,14 @@
         <div class="testimonials-section">
 			<div class="container">
 				<div class="testimonials-section-head text-center">
-					<h3>Testimonials</h3>
+					<h3>客户评价</h3>
 				</div>
 				<div class="members">
 					<div class="col-md-4 member1">
 						<img src="{% static 'images/mem.jpg' %}" alt="" />
 						<div class="text text-center">
-							<h4>John Doe</h4>
-							<p>CEO, Company.com</p>
+							<h4>武永号</h4>
+							<p>CEO. <a href="http://www.cecotw.com/" target="_blank">cecotw.com</a></p>
 						</div>
 					</div>
 					<div class="col-md-8 description">
@@ -72,17 +67,17 @@
                             <ul id="flexiselDemo4">
                                 <li>
                                     <div class="client-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.</p>
+                                        <p>他总是说很忙，他总是说有事来不了，他总是说手机信号不好打不了电话，他总是说收不到信息所以没办法回，他总是说……</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="client-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                                        <p>可是我想了那么多的客观原因，却唯独忘了他只是没有心。从来不怀疑他的真心，我所做的所有假设都是以他爱我为前提。在这个前提下，什么都可以原谅。可是没有爱，所有的借口原来也是理所当然。</p>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="client-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. </p>
+                                        <p>不是没有忧伤，不是不会记恨，但更多的是受骗的感觉，而忽视了其它。那段日子记挂的是这个男子，该要怎样的幸福下去才能回应对我的伤害。</p>
                                     </div>
                                 </li>
                             </ul>

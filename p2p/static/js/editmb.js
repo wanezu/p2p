@@ -62,7 +62,7 @@
 
         // 获取并验证手机验证码
         var getMsgCode = function() {
-            var getcodeUrl = '/user/EMCode',
+            var getcodeUrl = '/index/EMphone',
                 data = {
                     "is_edit": 1
                 };
@@ -73,6 +73,7 @@
                 dataType: "json",
                 beforeSend: function() {},
                 success: function(result) {
+                    alert(result);
                     setProperty();
                     callback(result);
                 },

@@ -21,6 +21,14 @@ def index(request):
         login = 1
     else:
         login = 0
+
+    #友情链接
+    friendly = Friendly.objects.filter(type=1)
+    #合作伙伴
+    together = Friendly.objects.filter(type=2)
+
+
+    #获取交易记录
     trade_arr = Trade.objects.all()[:5]
     # return render(request, 'failure.html', {'reason': trade_arr})
 

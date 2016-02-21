@@ -400,7 +400,6 @@ i.global{
 	margin: 3em 0;
 }
 .text{
-	background:#fff;
 	padding:12px;
 }
 .text h4{
@@ -418,7 +417,7 @@ i.global{
 .description {
 	background: rgba(91, 128, 54, 0.67);
 	padding: 3em 0 0 0;
-	min-height: 305px;
+	min-height: 314px;
 }
 .client-text {
 	padding: 0 8em;
@@ -2765,3 +2764,7 @@ margin-bottom:3em;
 	}
 }
 
+h1 {
+	margin-top: 0;
+	padding-top: 15px;
+}

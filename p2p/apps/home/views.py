@@ -6,7 +6,8 @@ from django.shortcuts import render,redirect,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
 from django.template import RequestContext
 from p2p.apps.home.forms import *
-from p2p.apps.home.models import User
+from p2p.apps.home.models import *
+from django.core.mail import send_mail
 from django.contrib.auth import logout, login
 from django.contrib.auth.hashers import make_password
 # Create your views here.
@@ -131,6 +132,41 @@ def logout(request):
     #     print(e)
     #     logger.error(e)
     # return redirect(request.META['HTTP_REFERER'])
+
+#发送邮件
+def email(request):
+    # if request.method == "POST":
+#        方式一：
+    email = send_mail('subject', 'this is the message of email', 'cecotw@163.com', ['249508741@qq.com','cecotw@126.com'], fail_silently=True)
+
+#        方式二：
+#         message1 = ('subject1','this is the message of email1','pythonsuper@gmail.com',['1565208411@qq.com','xinxinyu2011@163.com'])
+#         message2 = ('subject2','this is the message of email2','pythonsuper@gmail.com',['1373763906@qq.com','xinxinyu2011@163.com'])
+#         send_mass_mail((message1,message2), fail_silently=False)
+
+#        方式三：防止邮件头注入
+#         try:
+#             send_mail(subject, message, from_email, recipient_list, fail_silently, auth_user, auth_password, connection)
+#         except BadHeaderError:
+#             return HttpResponse('Invaild header fount.')
+
+#        方式四：EmailMessage()
+        #首先实例化一个EmailMessage()对象
+#         em = EmailMessage('subject','body','from@example.com',['1565208411@qq.com'],['xinxinyu2011@163.com'],header={'Reply-to':'another@example.com'})
+        #调用相应的方法
+
+#         方式五：发送多用途邮件
+#         subject,form_email,to = 'hello','from@example.com','1565208411@qq.com'
+#         text_content = 'This is an important message'
+#         html_content = u'<b>激活链接：</b><a href="http://www.baidu.com">http:www.baidu.com</a>'
+#         msg = EmailMultiAlternatives(subject,text_content,form_email,[to])
+#         msg.attach_alternative(html_content, 'text/html')
+#         msg.send()
+
+#       发送邮件成功了给管理员发送一个反馈
+#         mail_admins(u'用户注册反馈', u'当前XX用户注册了该网站', fail_silently=True)
+    return HttpResponse(email)
+#     return render_to_response('user/bonus.html')
 
 
 

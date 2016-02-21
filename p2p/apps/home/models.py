@@ -77,3 +77,19 @@ class Redpaper(models.Model):
 
     def __str__(self):
         return self.red_name
+
+#友情链接
+class Friendly(models.Model):
+    name = models.CharField(max_length=20,default='',verbose_name='名称')
+    time = models.DateTimeField(auto_now_add=True,verbose_name='连接添加时间')
+    photo = models.ImageField(upload_to='friendly/%Y/%m', default='friendly/default.png', max_length=200, blank=True, null=True,verbose_name='图片上传')
+    address = models.CharField(max_length=300,default='',verbose_name='连接地址')
+    type = models.CharField(max_length=2, choices=(('1', '友情链接'), ('2', '合作伙伴')),default=1,verbose_name='添加类型')
+    class Meta:
+        verbose_name = '友情链接或合作伙伴'
+        verbose_name_plural = verbose_name
+        ordering = ['id']
+
+    def __str__(self):
+        return self.name
+

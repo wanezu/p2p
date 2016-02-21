@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block left_content %}
+<script>
+$('#open01').removeClass('active');
+$('#open02').addClass('active');
+</script>
 	<!-- header-section-ends -->
 <div class="wrap" style="margin-top: 30px;">
 <link href="{% static 'css/v11.min.css' %}" rel="stylesheet" type="text/css" media="all" />
@@ -12,7 +16,7 @@
         <div class="touzi_top clearfix">
             <div class="tztop_left fl">
                 <div class="title_box">
-                    <h1 class="pr30">
+                    <h1 class="pr30" style="padding-top: 0">
                         <span>
                             <em>{{ trade_details.title }}</em>
                             <em class="f14 pl15">编号: {{ trade_details.id }}</em>

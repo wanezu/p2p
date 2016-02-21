@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block left_content %}
+    <script>
+    $('#open01').removeClass('active');
+    $('#open04').addClass('active');
+    </script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/p-news-mediadetail.css' %}">
@@ -19,7 +23,7 @@
             <div class="p_news_mediadetail">
                 <div class="ui-box">
                     <div class="h-title">
-                        <h2><p style="margin-top: 12px;"><i></i>媒体报道</p></h2>
+                        <h2 style="margin-top: 0px;"><p style="margin-top: 12px;"><i></i>媒体报道</p></h2>
                     </div>
                     <div class="media-article">
                         <div class="news-tit">

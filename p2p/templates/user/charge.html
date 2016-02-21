@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block left_content %}
+<script>
+$('#open01').removeClass('active');
+$('#open05').addClass('active');
+</script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/v1.min.css' %}">
 <script type="text/javascript" src="{% static 'js/v1.min.js' %}"></script>
 <div class="wrap" style="height: 600px;">

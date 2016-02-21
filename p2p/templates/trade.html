@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block left_content %}
+    <script>
+    $('#open01').removeClass('active');
+    $('#open02').addClass('active');
+    </script>
 	<!-- header-section-ends -->
     <link href="{% static 'css/index_v2.all.min.css' %}" rel="stylesheet" type="text/css" media="all" />
     <script src="{% static 'js/common_v2.all.min.js' %}"></script>
@@ -51,7 +55,7 @@
                                     </div>
                                     <div class="product_btn">
                                         {% if children_comment.1 != 0 %}
-                                            <a href="" class="btn_touzi">投资</a>
+                                            <a href="/index/trade_list?id={{ trade.id }}" class="btn_touzi">投资</a>
                                         {% else %}
                                             <span class="btn_manbiao">满标</span>
                                         {% endif %}

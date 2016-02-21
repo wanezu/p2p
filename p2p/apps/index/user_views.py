@@ -1,13 +1,14 @@
 __author__ = 'root'
 import logging
-from django.http import JsonResponse
 import time
+from django.http import JsonResponse
 from django.shortcuts import render,render_to_response
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 from django.http import HttpResponse,HttpResponseRedirect
 from p2p.apps.index.models import *
 from p2p.apps.home.models import *
 from p2p.apps.index.forms import *
+from django.views.decorators.csrf import csrf_exempt
 from django.template import RequestContext
 from django.conf import settings
 
@@ -197,6 +198,46 @@ def EMCode(request):
 
     # return login
     return render_to_response('user/load.html',locals())
+
+@csrf_exempt
+#手机验证
+def EMphone(request):
+    response=HttpResponse()
+    response['Content-Type']="text/javascript"
+    username = request.COOKIES.get('username','')
+    if username:
+        login = 1
+    else:
+        login = 0
+        user_list = User.objects.get(username__exact=username)
+    a = 10
+    # return JsonResponse(a, safe=False)
+    response.write(a)
+    return response
+
+
+#修改银行卡号
+def editbank(request):
+    username = request.COOKIES.get('username','')
+    if username:
+        login = 1
+    else:
+        login = 0
+    return render_to_response('user/editbank.html',locals())
+
+@csrf_exempt
+#修改银行卡号
+def bankinfoImage(request):
+    response=HttpResponse()
+    response['Content-Type']="text/javascript"
+    username = request.COOKIES.get('username','')
+    data = {'code':'0000','message':{'image_id':'edwfewf'}}
+    # return JsonResponse(a, safe=False)
+    response.write(data)
+    return JsonResponse(data)
+
+
+
 
 #修改密码
 def changepw(request):

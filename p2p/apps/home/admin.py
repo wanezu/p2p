@@ -2,6 +2,7 @@ from django.contrib import admin
 from p2p.apps.home.models import User
 from p2p.apps.home.models import Region
 from p2p.apps.home.models import Redpaper
+from p2p.apps.home.models import Friendly
 # from p2p.apps.index.models import Trade
 # Register your models here.
 
@@ -32,3 +33,9 @@ class RedpaperAdmin(admin.ModelAdmin):
     list_display = ('red_name','get_time','con_time','deadline','price','status',)
     list_per_page = 20
     search_fields = ('red_name',)
+
+@admin.register(Friendly)
+class RedpaperAdmin(admin.ModelAdmin):
+    list_display = ('name','time','photo','type',)
+    list_per_page = 20
+    search_fields = ('name',)

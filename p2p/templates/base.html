@@ -14,8 +14,7 @@
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="UNITED COMMS Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="P2P是peer-to-peer的缩写，peer在英语里有"（地位、能力等）同等者"、"同事"和"伙伴"等意义。这样一来，P2P也就可以理解为"伙伴对伙伴"的意思，或称为对等联网，是互联网金融（ITFIN）产品的一种。P2P直接将人们联系起来，让人们通过互联网直接交互。P2P使得网络上的沟通变得容易、更直接共享和交互，真正地消除中间商，为企业与个人提供更大的方便。" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.useso.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -25,21 +24,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="container">
 			<div class="logo">
-				<a  class="active" href=""><img src="{% static 'images/logo.png' %}" class="img-responsive" alt="" /></a>
+				<a  class="active" href="/index/index/"><img src="{% static 'images/logo.png' %}" class="img-responsive" alt="" /></a>
 			</div>
 			<div class="header-right">
-				<h4><i class="phone"></i>(256) 152 3658</h4>
+				<h4><i class="phone"></i>13245135215</h4>
 				<span class="menu"></span>
 				<div class="top-menu">
 					<ul>
-						<li><a class="active" href="/index/index/">首页</a></li>
-						<li><a href="/index/trade/">我要投资</a></li>
-						<li><a href="about.html">我要借款</a></li>
-						<li><a href="/index/notice">关于我们</a></li>
+						<li><a id="open01" class="active" href="/index/index/">首页</a></li>
+						<li><a id="open02" href="/index/trade/">我要投资</a></li>
+						<li><a id="open03" href="about.html">我要借款</a></li>
+						<li><a id="open04" href="/index/notice">关于我们</a></li>
                         {% if login == 1 %}
-						    <li><a href="/index/member/">我的账户</a></li>
+						    <li><a id="open05" href="/index/member/">我的账户</a></li>
                         {% else %}
-						    <li><a href="/home/login/">登录</a>/<a href="/home/regist/">注册</a></li>
+						    <li><a id="open05" href="/home/login/">登录</a>/<a href="/home/regist/">注册</a></li>
                         {% endif %}
 					</ul>
 				</div>

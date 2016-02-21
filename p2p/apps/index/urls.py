@@ -27,5 +27,8 @@ urlpatterns = [
     url(r'^contract/$',user_views.contract,name = 'contract'),
     url(r'^coupon/$',user_views.coupon,name = 'coupon'),
     url(r'^bonus/$',user_views.bonus,name = 'bonus'),
+    url(r'^EMphone$',user_views.EMphone,name = 'EMphone'),
     url(r'^setmessage/$',user_views.setmessage,name = 'setmessage'),
+    url(r'^editbank/$',user_views.editbank,name = 'editbank'),
+    url(r'^bankinfoImage$',user_views.bankinfoImage,name = 'bankinfoImage'),
 ]

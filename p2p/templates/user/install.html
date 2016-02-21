@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block left_content %}
+<script>
+$('#open01').removeClass('active');
+$('#open05').addClass('active');
+</script>
 <link rel="stylesheet" type="text/css" href="{% static 'css/index_v2.all.min.css' %}">
 <script type="text/javascript" src="{% static 'js/common_v2.all.min.js' %}"></script>
 <div class="wrap">
@@ -93,7 +97,7 @@
                             <li>
                                 <label>银行卡号：</label><span class="sec-info gray">为保障资金安全，余额仅可提现至绑定银行卡中</span>
                                 {% if user_list.real_name %}
-                                    <i class="yes"></i><span class="status">已设置</span><span>中国建设银行 6217***********8161</span><a href="http://www.firstp2p.com/account/editbank" class="blue">修改</a>
+                                    <i class="yes"></i><span class="status">已设置</span><span>中国建设银行 6217***********8161</span><a href="/index/editbank/" class="blue">修改</a>
                                 {% else %}
                                     <i class="no"></i><span class="status">未设置</span><a href="javascript:void(0)" class="blue" id="add_submit_btn">设置</a>
                                 {% endif %}

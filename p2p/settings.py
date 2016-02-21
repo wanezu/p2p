@@ -124,6 +124,18 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(SETTINGS_DIR,  'uploads')
 
+
+#邮件配置
+EMAIL_HOST = 'smtp.163.com'                   #SMTP地址
+EMAIL_PORT = 25                                 #SMTP端口
+EMAIL_HOST_USER = 'cecotw@163.com'       #我自己的邮箱
+EMAIL_HOST_PASSWORD = 'wyh.1008'                  #我的邮箱密码
+EMAIL_SUBJECT_PREFIX = u'[Cecotw]'            #为邮件Subject-line前缀,默认是'[django]'
+EMAIL_USE_TLS = True                             #与SMTP服务器通信时，是否启动TLS链接(安全链接)。默认是false
+#管理员站点
+SERVER_EMAIL = 'cecotw@163.com'
+
+
 # 自定义日志输出信息
 LOGGING = {
     'version': 1,
